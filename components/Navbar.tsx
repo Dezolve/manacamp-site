@@ -22,16 +22,27 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+        scrolled || isOpen
           ? "border-b border-border-subtle bg-[rgba(6,10,22,0.78)] backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 gap-4">
           <Link href="/" className="flex items-center gap-2 group">
             <div className="icon-tile w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 group-hover:border-[rgba(255,158,88,0.34)] group-hover:shadow-[0_0_24px_rgba(90,178,255,0.18)]">
               <Zap className="w-4 h-4 text-white" fill="white" />
@@ -41,12 +52,12 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-5 lg:gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm text-text-secondary hover:text-white transition-colors duration-200"
+                className="text-sm whitespace-nowrap text-text-secondary hover:text-white transition-colors duration-200"
               >
                 {link.label}
               </Link>
@@ -61,8 +72,9 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-text-secondary hover:text-white transition-colors"
+            className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-border-subtle bg-[rgba(8,13,25,0.55)] text-text-secondary hover:text-white transition-colors"
             aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -70,14 +82,14 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden panel border-t border-border-subtle">
-          <div className="px-4 py-4 flex flex-col gap-4">
+        <div className="md:hidden px-4 pb-4">
+          <div className="panel rounded-2xl border-border-subtle p-4 flex flex-col gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-text-secondary hover:text-white transition-colors"
+                className="rounded-xl px-3 py-2.5 text-text-secondary hover:text-white hover:bg-white/5 transition-colors"
               >
                 {link.label}
               </Link>
@@ -85,7 +97,7 @@ export default function Navbar() {
             <Link
               href="/#download"
               onClick={() => setIsOpen(false)}
-              className="btn-primary px-4 py-2 rounded-full text-sm font-medium text-center transition-all duration-200"
+              className="btn-primary mt-2 px-4 py-3 rounded-full text-sm font-medium text-center transition-all duration-200"
             >
               Get the App
             </Link>

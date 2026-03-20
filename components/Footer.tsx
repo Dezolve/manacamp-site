@@ -21,7 +21,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border-subtle bg-[rgba(4,7,15,0.82)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4 group">
               <div className="icon-tile w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 group-hover:border-[rgba(255,158,88,0.34)]">
@@ -82,11 +82,11 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-10 pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-text-muted">
+        <div className="mt-10 pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left">
+          <p className="text-xs text-text-muted text-balance">
             © {new Date().getFullYear()} ManaCamp. All rights reserved.
           </p>
-          <p className="text-xs text-text-muted">
+          <p className="text-xs text-text-muted text-balance">
             Built for communities that want a better place to gather.
           </p>
         </div>

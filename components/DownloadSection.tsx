@@ -29,7 +29,7 @@ const highlights = [
 
 export default function DownloadSection() {
   return (
-    <section id="download" className="section-divider py-24 relative overflow-hidden">
+    <section id="download" className="section-divider py-20 sm:py-24 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,16,32,0),rgba(10,16,32,0.44))]" />
         <motion.div
@@ -40,10 +40,10 @@ export default function DownloadSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 items-center">
           <ScrollReveal direction="left">
             <div className="relative">
-              <div className="panel-strong rounded-3xl p-8 relative overflow-hidden">
+              <div className="panel-strong rounded-3xl p-5 sm:p-8 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[linear-gradient(160deg,rgba(90,178,255,0.12),transparent_46%,rgba(255,138,61,0.08))] rounded-3xl" />
 
                 <div className="relative">
@@ -54,7 +54,7 @@ export default function DownloadSection() {
                   <span className="eyebrow-pill text-xs mb-3 border-[rgba(90,178,255,0.22)] text-[rgb(182,224,255)]">
                     Available Now
                   </span>
-                  <h3 className="text-3xl font-bold text-white mb-2">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 text-balance">
                     ManaCamp for Windows
                   </h3>
                   <p className="text-text-secondary text-sm mb-6">
@@ -63,7 +63,7 @@ export default function DownloadSection() {
 
                   <a
                     href="/download/manacamp-windows-setup.exe"
-                    className="btn-primary flex items-center justify-center gap-3 w-full px-6 py-4 rounded-2xl font-semibold transition-all duration-200 hover:-translate-y-0.5 mb-4"
+                    className="btn-primary flex items-center justify-center gap-3 w-full px-5 sm:px-6 py-3.5 sm:py-4 rounded-2xl font-semibold transition-all duration-200 hover:-translate-y-0.5 mb-4"
                     download
                   >
                     <Download className="w-5 h-5" />
@@ -76,7 +76,7 @@ export default function DownloadSection() {
                 </div>
               </div>
 
-              <div className="mt-4 panel rounded-2xl p-5">
+              <div className="mt-4 panel rounded-2xl p-4 sm:p-5">
                 <h4 className="text-sm font-semibold text-text-secondary mb-3">
                   System Requirements
                 </h4>
@@ -97,23 +97,23 @@ export default function DownloadSection() {
               <span className="eyebrow-pill text-xs uppercase tracking-[0.28em] mb-6 border-[rgba(255,138,61,0.2)] text-[rgb(255,198,158)]">
                 Windows Desktop App
               </span>
-              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+              <h2 className="text-3xl sm:text-5xl font-bold text-white mb-5 sm:mb-6 text-balance">
                 Full power on{" "}
                 <span className="gradient-text">your desktop</span>
               </h2>
-              <p className="text-text-secondary text-lg leading-relaxed mb-10">
+              <p className="text-base sm:text-lg text-text-secondary leading-relaxed mb-8 sm:mb-10 text-balance">
                 ManaCamp&apos;s desktop app is designed for the full experience:
                 fast navigation, immersive chat, rich community spaces, voice
                 and video sessions, screen sharing, and room for the tools that
                 make your server feel alive.
               </p>
 
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {highlights.map((item, i) => {
                   const Icon = item.icon;
                   return (
                     <ScrollReveal key={item.title} delay={0.2 + i * 0.1} direction="right">
-                      <div className="panel flex items-start gap-4 rounded-2xl p-4">
+                      <div className="panel flex items-start gap-4 rounded-2xl p-4 min-w-0">
                         <div className="icon-tile w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 border-[rgba(90,178,255,0.18)]">
                           <Icon className={`w-5 h-5 ${i === 1 ? "text-accent-warm-soft" : "text-accent-primary"}`} />
                         </div>

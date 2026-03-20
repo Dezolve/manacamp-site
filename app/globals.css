@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: dark;
   --background: #060816;
   --background-elevated: #0a1020;
   --surface: #101a35;
@@ -45,13 +46,17 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
+  min-width: 320px;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
   background-image:
     radial-gradient(circle at top center, rgba(57, 112, 201, 0.22), transparent 34%),
     radial-gradient(circle at 20% 14%, rgba(90, 178, 255, 0.16), transparent 24%),
@@ -116,6 +121,7 @@ body::before {
 .eyebrow-pill {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.5rem;
   padding: 0.45rem 0.9rem;
   border-radius: 9999px;
@@ -126,6 +132,7 @@ body::before {
 }
 
 .btn-primary {
+  min-height: 3rem;
   background: linear-gradient(135deg, #4da3ff 0%, #5ab2ff 58%, #5f8dff 100%);
   color: var(--foreground);
   border: 1px solid rgba(120, 187, 255, 0.35);
@@ -138,6 +145,7 @@ body::before {
 }
 
 .btn-secondary {
+  min-height: 3rem;
   background: rgba(9, 15, 29, 0.72);
   color: var(--foreground);
   border: 1px solid var(--border-subtle);
@@ -169,6 +177,29 @@ body::before {
 
 .input-field::placeholder {
   color: var(--text-muted);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button {
+  touch-action: manipulation;
+}
+
+@media (max-width: 640px) {
+  .section-divider::before {
+    width: calc(100% - 1.5rem);
+  }
+
+  .eyebrow-pill {
+    justify-content: center;
+  }
 }
 
 .ambient-blue {
