@@ -64,7 +64,7 @@ export default function Navbar() {
             ))}
             <Link
               href="/#download"
-              className="btn-primary px-4 py-2 rounded-full text-sm font-medium transition-all duration-200"
+              className="btn-primary inline-flex h-10 shrink-0 items-center justify-center rounded-full px-5 text-sm leading-none font-medium transition-all duration-200"
             >
               Get the App
             </Link>
@@ -97,7 +97,7 @@ export default function Navbar() {
             <Link
               href="/#download"
               onClick={() => setIsOpen(false)}
-              className="btn-primary mt-2 px-4 py-3 rounded-full text-sm font-medium text-center transition-all duration-200"
+              className="btn-primary mt-2 inline-flex min-h-0 items-center justify-center rounded-full px-4 py-3 text-sm leading-none font-medium text-center transition-all duration-200"
             >
               Get the App
             </Link>
