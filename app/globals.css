@@ -85,6 +85,17 @@ body::before {
   background-clip: text;
 }
 
+.brand-wordmark-mana {
+  color: #7ecaff;
+}
+
+.brand-wordmark-camp {
+  background: linear-gradient(135deg, #ffb57d 0%, #ff9f43 46%, #ff7a1a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .glass,
 .panel {
   background:

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Zap, Twitter, Github, Mail } from "lucide-react";
+import { Twitter, Github, Mail } from "lucide-react";
+import BrandMark from "@/components/BrandMark";
 
 const footerLinks = {
   Product: [
@@ -25,9 +26,12 @@ export default function Footer() {
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4 group">
               <div className="icon-tile w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 group-hover:border-[rgba(255,158,88,0.34)]">
-                <Zap className="w-4 h-4 text-white" fill="white" />
+                <BrandMark className="w-4 h-4 text-accent-primary" />
               </div>
-              <span className="text-xl font-semibold text-white">ManaCamp</span>
+              <span className="text-xl font-semibold">
+                <span className="brand-wordmark-mana">Mana</span>
+                <span className="brand-wordmark-camp">Camp</span>
+              </span>
             </Link>
             <p className="text-sm text-text-secondary leading-relaxed">
               A modern home for channels, chats, sessions, and community.

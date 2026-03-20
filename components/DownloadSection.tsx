@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const requirements = [
   "Windows 10 / 11 (64-bit)",
-  "Internet connection recommended",
+  "Internet connection required",
 ];
 
 const highlights = [
@@ -52,13 +52,13 @@ export default function DownloadSection() {
                   </div>
 
                   <span className="eyebrow-pill text-xs mb-3 border-[rgba(90,178,255,0.22)] text-[rgb(182,224,255)]">
-                    Available Now
+                    Preview Available Now
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 text-balance">
                     ManaCamp for Windows
                   </h3>
                   <p className="text-text-secondary text-sm mb-6">
-                    Desktop App · Available Now
+                    Desktop App Preview · Available Now
                   </p>
 
                   <a
@@ -67,11 +67,11 @@ export default function DownloadSection() {
                     download
                   >
                     <Download className="w-5 h-5" />
-                    Download for Windows (.exe)
+                    Download Preview for Windows (.exe)
                   </a>
 
                   <p className="text-xs text-text-muted text-center">
-                    Free download · No credit card required
+                    Preview build · Free download · No credit card required
                   </p>
                 </div>
               </div>

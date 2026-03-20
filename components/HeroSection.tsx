@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ChevronDown, Zap } from "lucide-react";
+import { ChevronDown } from "lucide-react";
+import BrandMark from "@/components/BrandMark";
 
 export default function HeroSection() {
   return (
@@ -37,6 +38,17 @@ export default function HeroSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-8 sm:pb-10">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55 }}
+          className="mb-6 sm:mb-8 flex justify-center lg:justify-start"
+        >
+          <div className="panel rounded-full px-4 py-2 text-xs sm:text-sm text-text-secondary border-[rgba(255,138,61,0.18)]">
+            Under construction. Early preview in active development.
+          </div>
+        </motion.div>
+
         <div className="grid grid-cols-1 gap-10 sm:gap-12 lg:gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,540px)] lg:items-center">
           <div className="text-center lg:text-left">
             <motion.div
@@ -45,7 +57,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6 }}
               className="eyebrow-pill mb-6 sm:mb-8 mx-auto lg:mx-0 text-center lg:text-left whitespace-nowrap"
             >
-              <Zap className="w-3.5 h-3.5 text-accent-warm-soft" fill="currentColor" />
+              <BrandMark className="w-3.5 h-3.5 text-accent-primary" />
               <span className="text-sm">Windows available now · iOS coming soon</span>
             </motion.div>
 
@@ -76,7 +88,7 @@ export default function HeroSection() {
               transition={{ duration: 0.7, delay: 0.24 }}
               className="text-sm text-text-muted max-w-xl mx-auto lg:mx-0 -mt-2 mb-8 sm:mb-10"
             >
-              Under construction. Early product and site preview. Features, polish, and platform support are still actively being refined.
+              Early product and site preview. Features, polish, and platform support are still actively being refined.
             </motion.p>
 
             <motion.div
@@ -130,7 +142,7 @@ export default function HeroSection() {
                   <span className="text-[10px] sm:text-xs uppercase tracking-[0.24em] sm:tracking-[0.28em] text-text-muted text-right">Live server</span>
                 </div>
 
-                <div className="grid grid-cols-[74px_minmax(0,1fr)] sm:grid-cols-[108px_minmax(0,1fr)] min-h-[360px] sm:min-h-[420px]">
+                <div className="grid grid-cols-[84px_minmax(0,1fr)] sm:grid-cols-[132px_minmax(0,1fr)] min-h-[360px] sm:min-h-[420px]">
                   <div className="bg-[linear-gradient(180deg,rgba(13,21,42,0.94),rgba(9,15,30,0.96))] border-r border-border-subtle p-2.5 sm:p-4 space-y-2 sm:space-y-3">
                     {[
                       "ManaCamp",
@@ -140,7 +152,7 @@ export default function HeroSection() {
                     ].map((item, index) => (
                       <div
                         key={item}
-                        className={`rounded-xl sm:rounded-2xl px-2.5 sm:px-3 py-2 text-[11px] sm:text-xs font-medium ${
+                        className={`w-full overflow-hidden text-ellipsis whitespace-nowrap rounded-xl sm:rounded-2xl px-2.5 sm:px-3 py-2 text-[11px] sm:text-xs font-medium ${
                           index === 0
                             ? "bg-[rgba(90,178,255,0.16)] text-white border border-[rgba(110,200,255,0.22)]"
                             : "text-text-secondary bg-[rgba(255,255,255,0.02)]"

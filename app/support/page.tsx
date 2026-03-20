@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
-import { Bell, ChevronDown, Download, Mail, MessageSquare, Zap } from "lucide-react";
+import BrandMark from "@/components/BrandMark";
+import { Bell, ChevronDown, Download, Mail, MessageSquare } from "lucide-react";
 
 const faqs = [
   {
@@ -205,7 +206,7 @@ export default function SupportPage() {
           <ScrollReveal>
             <div className="flex items-center gap-3 mb-10">
               <div className="icon-tile w-8 h-8 rounded-lg flex items-center justify-center">
-                <Zap className="w-4 h-4 text-white" fill="white" />
+                <BrandMark className="w-4 h-4 text-accent-primary" />
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-white">
                 Frequently Asked Questions

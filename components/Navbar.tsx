@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import BrandMark from "@/components/BrandMark";
 
 const navLinks = [
   { href: "/#features", label: "Features" },
@@ -45,10 +46,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 gap-4">
           <Link href="/" className="flex items-center gap-2 group">
             <div className="icon-tile w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 group-hover:border-[rgba(255,158,88,0.34)] group-hover:shadow-[0_0_24px_rgba(90,178,255,0.18)]">
-              <Zap className="w-4 h-4 text-white" fill="white" />
+              <BrandMark className="w-4 h-4 text-accent-primary" />
             </div>
-            <span className="text-xl font-semibold tracking-[0.02em] text-white">
-              ManaCamp
+            <span className="text-xl font-semibold tracking-[0.02em]">
+              <span className="brand-wordmark-mana">Mana</span>
+              <span className="brand-wordmark-camp">Camp</span>
             </span>
           </Link>
 
