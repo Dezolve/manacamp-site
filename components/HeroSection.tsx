@@ -55,9 +55,9 @@ export default function HeroSection() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-semibold tracking-tight mb-6"
             >
-              <span className="text-white">A darker, better place</span>
+              <span className="text-white">See who&apos;s around.</span>
               <br />
-              <span className="gradient-text">for your community to gather.</span>
+              <span className="gradient-text">Join what&apos;s happening.</span>
             </motion.h1>
 
             <motion.p
@@ -118,13 +118,13 @@ export default function HeroSection() {
                     <span className="h-2.5 w-2.5 rounded-full bg-[rgba(90,178,255,0.6)]" />
                     <span className="h-2.5 w-2.5 rounded-full bg-[rgba(123,97,255,0.45)]" />
                   </div>
-                  <span className="text-xs uppercase tracking-[0.28em] text-text-muted">Live camp</span>
+                  <span className="text-xs uppercase tracking-[0.28em] text-text-muted">Live server</span>
                 </div>
 
                 <div className="grid grid-cols-[88px_minmax(0,1fr)] sm:grid-cols-[108px_minmax(0,1fr)] min-h-[420px]">
                   <div className="bg-[linear-gradient(180deg,rgba(13,21,42,0.94),rgba(9,15,30,0.96))] border-r border-border-subtle p-4 space-y-3">
                     {[
-                      "Camp",
+                      "ManaCamp",
                       "Raid",
                       "Media",
                       "Friends",

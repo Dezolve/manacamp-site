@@ -87,7 +87,7 @@ export default function IOSSection() {
                       </div>
                     </div>
                     <div className="px-4 pt-4">
-                      <div className="text-white font-bold text-lg mb-1">Campfire</div>
+                      <div className="text-white font-bold text-lg mb-1">ManaCamp</div>
                       <div className="text-[rgb(182,224,255)] text-xs mb-4">3 friends online now</div>
                       <div className="space-y-2 mb-4">
                         {[

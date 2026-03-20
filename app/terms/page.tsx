@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
-import { Shield, FileText } from "lucide-react";
+import Link from "next/link";
+import { FileText } from "lucide-react";
+import { legalLastUpdated } from "@/app/legalContent";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions – ManaCamp",
   description:
-    "Read ManaCamp's Terms of Service and Privacy Policy. Learn how we collect, use, and protect your data.",
+    "Read ManaCamp's Terms of Service and the rules governing use of the platform.",
 };
-
-const lastUpdated = "March 1, 2025";
 
 const sections = [
   {
@@ -95,64 +95,6 @@ Email: legal@manacamp.app`,
   },
 ];
 
-const privacySections = [
-  {
-    id: "privacy-collect",
-    title: "Information We Collect",
-    content: `We collect information you provide directly to us, such as:
-• Account information (name, email address, password)
-  • Messages, uploads, profile details, and other content you choose to add
-  • Payment information for paid services, when applicable, handled by our payment providers
-• Communications with our support team
-
-We also collect automatically:
-• Device information (OS, app version)
-• Usage analytics (features used, session duration)
-• Crash reports and performance data`,
-  },
-  {
-    id: "privacy-use",
-    title: "How We Use Your Information",
-    content: `We use your information to:
-• Provide, maintain, and improve the App
-• Process transactions and send related information
-  • Sync supported account data across devices
-• Send you technical notices and support messages
-• Respond to your comments and questions
-• Analyze usage to improve features
-
-We do not sell your personal information to third parties.`,
-  },
-  {
-    id: "privacy-sharing",
-    title: "Information Sharing",
-    content: `We may share your information with:
-• Service providers who assist in our operations (cloud hosting, analytics)
-• Law enforcement when required by law
-
-All third-party service providers are bound by confidentiality agreements and may only process your data as directed by us.`,
-  },
-  {
-    id: "privacy-security",
-    title: "Data Security",
-    content: `We use administrative, technical, and organizational measures designed to protect your information.
-
-No system is completely secure. We encourage you to use a strong, unique password for your account and to protect access to your devices.`,
-  },
-  {
-    id: "privacy-rights",
-    title: "Your Rights",
-    content: `Depending on your location, you may have rights to:
-• Access the personal information we hold about you
-• Correct inaccurate information
-• Request deletion of your account and data
-• Object to or restrict processing of your information
-• Portability of your data
-
-To exercise these rights, contact us at privacy@manacamp.app.`,
-  },
-];
-
 export default function TermsPage() {
   return (
     <div className="min-h-screen">
@@ -172,7 +114,7 @@ export default function TermsPage() {
               <span className="gradient-text">Conditions</span>
             </h1>
             <p className="text-text-secondary text-sm">
-              Last updated: {lastUpdated}
+              Last updated: {legalLastUpdated}
             </p>
           </ScrollReveal>
         </div>
@@ -221,36 +163,26 @@ export default function TermsPage() {
         </div>
       </section>
 
-      <section id="privacy" className="section-divider pb-24 scroll-mt-20">
+      <section className="section-divider pb-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="flex items-center gap-3 mb-8">
-              <div className="icon-tile w-8 h-8 rounded-lg flex items-center justify-center">
-                <Shield className="w-4 h-4 text-accent-primary" />
+            <div className="panel rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                  Privacy Policy
+                </h2>
+                <p className="text-sm text-text-secondary leading-relaxed max-w-2xl">
+                  Privacy terms now live on a dedicated page so policy updates and legal references stay separate from the platform terms.
+                </p>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">
-                Privacy Policy
-              </h2>
+              <Link
+                href="/privacy"
+                className="btn-secondary rounded-full px-5 py-3 text-sm font-medium text-center transition-all duration-200"
+              >
+                View Privacy Policy
+              </Link>
             </div>
           </ScrollReveal>
-
-          <div className="space-y-6">
-            {privacySections.map((section, i) => (
-              <ScrollReveal key={section.id} delay={i * 0.05}>
-                <div
-                  id={section.id}
-                  className="panel rounded-2xl p-6 scroll-mt-24"
-                >
-                  <h3 className="text-base font-bold text-white mb-3">
-                    {section.title}
-                  </h3>
-                  <div className="text-sm text-text-secondary leading-relaxed whitespace-pre-line">
-                    {section.content}
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
         </div>
       </section>
     </div>

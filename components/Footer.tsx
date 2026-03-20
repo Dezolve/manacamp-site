@@ -10,7 +10,7 @@ const footerLinks = {
   Resources: [
     { href: "/support", label: "Support" },
     { href: "/terms", label: "Terms & Conditions" },
-    { href: "/terms#privacy", label: "Privacy Policy" },
+    { href: "/privacy", label: "Privacy Policy" },
   ],
   Contact: [
     { href: "mailto:hello@manacamp.app", label: "hello@manacamp.app" },
