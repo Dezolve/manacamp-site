@@ -1,6 +1,6 @@
 # ManaCamp Marketing Site
 
-A modern marketing site for ManaCamp — the ultimate card game companion app.
+A dark, product-aligned marketing site for ManaCamp, a modern community platform for channels, DMs, voice, video, sessions, and bots.
 
 ## Tech Stack
 
@@ -13,9 +13,10 @@ A modern marketing site for ManaCamp — the ultimate card game companion app.
 
 ## Pages
 
-- `/` — Home: Hero, Features, iOS Coming Soon, Windows Download, CTA
+- `/` — Home: hero, product highlights, Windows download, iOS preview, CTA
 - `/support` — Support center with FAQ accordion and contact form
-- `/terms` — Terms & Conditions + Privacy Policy
+- `/privacy` — Dedicated privacy policy
+- `/terms` — Terms & Conditions
 
 ## Getting Started
 
@@ -35,7 +36,17 @@ pnpm start
 
 ## Deployment
 
-This project is configured for [Vercel](https://vercel.com/) deployment. Simply connect your GitHub repository to Vercel and it will auto-deploy on every push to `main`.
+This project is configured for [Vercel](https://vercel.com/) deployment.
+
+- Production deploys should come from pushes to `main`
+- Preview deploys are created automatically for non-`main` branches and pull requests
+- Custom domains can be attached in the Vercel project dashboard once DNS is pointed at Vercel
+
+## Brand Notes
+
+- Product name: `ManaCamp`
+- Site status: under construction / active preview
+- Attribution: `By DezolveLabs · https://dezolvelabs.com`
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Dezolve/manacamp-site)
 
