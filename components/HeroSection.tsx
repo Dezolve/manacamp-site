@@ -46,7 +46,7 @@ export default function HeroSection() {
               className="eyebrow-pill mb-6 sm:mb-8 mx-auto lg:mx-0 text-center lg:text-left"
             >
               <Zap className="w-3.5 h-3.5 text-accent-warm-soft" fill="currentColor" />
-              <span className="text-sm">Windows available now · iOS coming soon</span>
+              <span className="text-sm">Under construction · Windows available now · iOS coming soon</span>
             </motion.div>
 
             <motion.h1
@@ -68,6 +68,15 @@ export default function HeroSection() {
             >
               ManaCamp brings channels, DMs, voice, video, screen sharing, bots,
               and live sessions into one immersive space built for real-time communities.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.24 }}
+              className="text-sm text-text-muted max-w-xl mx-auto lg:mx-0 -mt-2 mb-8 sm:mb-10"
+            >
+              Early product and site preview. Features, polish, and platform support are still actively being refined.
             </motion.p>
 
             <motion.div

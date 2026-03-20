@@ -21,8 +21,8 @@ export default function Footer() {
   return (
     <footer className="border-t border-border-subtle bg-[rgba(4,7,15,0.82)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="lg:col-span-1">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4 group">
               <div className="icon-tile w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 group-hover:border-[rgba(255,158,88,0.34)]">
                 <Zap className="w-4 h-4 text-white" fill="white" />
@@ -62,7 +62,7 @@ export default function Footer() {
           </div>
 
           {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
+            <div key={category} className={category === "Contact" ? "col-span-2 sm:col-span-1" : "col-span-1"}>
               <h3 className="text-sm font-semibold text-white mb-3">
                 {category}
               </h3>
@@ -86,9 +86,19 @@ export default function Footer() {
           <p className="text-xs text-text-muted text-balance">
             © {new Date().getFullYear()} ManaCamp. All rights reserved.
           </p>
-          <p className="text-xs text-text-muted text-balance">
-            Built for communities that want a better place to gather.
-          </p>
+          <div className="flex flex-col items-center sm:items-end gap-1">
+            <p className="text-xs text-text-muted text-balance">
+              Built for communities that want a better place to gather.
+            </p>
+            <a
+              href="https://dezolvelabs.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-[rgb(182,224,255)] hover:text-white transition-colors"
+            >
+              By DezolveLabs · DezolveLabs.com
+            </a>
+          </div>
         </div>
       </div>
     </footer>
