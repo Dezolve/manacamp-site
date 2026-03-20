@@ -7,12 +7,12 @@ const footerLinks = {
     { href: "/#download", label: "Download" },
     { href: "/#ios", label: "iOS App" },
   ],
-  Company: [
+  Resources: [
     { href: "/support", label: "Support" },
     { href: "/terms", label: "Terms & Conditions" },
     { href: "/terms#privacy", label: "Privacy Policy" },
   ],
-  Connect: [
+  Contact: [
     { href: "mailto:hello@manacamp.app", label: "hello@manacamp.app" },
   ],
 };
@@ -31,7 +31,7 @@ export default function Footer() {
               <span className="text-xl font-bold gradient-text">ManaCamp</span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Your ultimate card game companion. Track, build, and dominate.
+              A modern home for channels, chats, sessions, and community.
             </p>
             <div className="flex items-center gap-3 mt-4">
               <a
@@ -89,7 +89,7 @@ export default function Footer() {
             © {new Date().getFullYear()} ManaCamp. All rights reserved.
           </p>
           <p className="text-xs text-gray-500">
-            Built with ❤️ for card game enthusiasts
+            Built for communities that want a better place to gather.
           </p>
         </div>
       </div>

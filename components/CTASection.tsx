@@ -21,19 +21,20 @@ export default function CTASection() {
 
             <div className="relative px-8 sm:px-16 py-16 sm:py-20 text-center">
               <h2 className="text-4xl sm:text-6xl font-bold text-white mb-6">
-                Ready to level up{" "}
-                <span className="gradient-text">your game?</span>
+                Ready to bring your{" "}
+                <span className="gradient-text">community together?</span>
               </h2>
               <p className="text-gray-300 text-lg max-w-xl mx-auto mb-10">
-                Download ManaCamp today and join thousands of players who are
-                already playing smarter, building better decks, and winning more.
+                Download ManaCamp for Windows and start building a space for
+                channels, DMs, sessions, bots, and everything your group needs
+                to stay connected.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
                   href="#download"
                   className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-amber-500 text-white font-semibold text-base hover:opacity-90 transition-all duration-200 shadow-xl hover:shadow-purple-500/40 hover:scale-105 flex items-center justify-center gap-2"
                 >
-                  Get ManaCamp Free
+                  Get ManaCamp for Windows
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
-import { ChevronDown, Mail, MessageSquare, BookOpen, Zap } from "lucide-react";
+import { Bell, ChevronDown, Download, Mail, MessageSquare, Zap } from "lucide-react";
 
 const faqs = [
   {
@@ -15,7 +15,7 @@ const faqs = [
       },
       {
         q: "Is ManaCamp free to use?",
-        a: "Yes! ManaCamp's core features are completely free. We offer an optional Pro subscription for advanced analytics, unlimited deck storage, and priority support.",
+        a: "ManaCamp is free to download on Windows. If pricing or paid plans change later, they&apos;ll be shown clearly in the app and on the site.",
       },
       {
         q: "When will the iOS app be available?",
@@ -32,7 +32,7 @@ const faqs = [
       },
       {
         q: "How does cloud sync work?",
-        a: "ManaCamp automatically syncs your collection and decks to our secure cloud servers whenever you're online. Your data is encrypted and backed up daily.",
+        a: "When you&apos;re signed in, ManaCamp keeps your account state, settings, and supported activity in sync so you can pick up where you left off on available platforms.",
       },
       {
         q: "Can I use ManaCamp on multiple devices?",
@@ -41,19 +41,19 @@ const faqs = [
     ],
   },
   {
-    category: "Collection & Decks",
+    category: "Communities & Chats",
     questions: [
       {
-        q: "How do I import my existing collection?",
-        a: "ManaCamp supports importing from CSV, MTGO decklists, and several other popular formats. Go to Collection → Import and select your file format.",
+        q: "How do channels and DMs work?",
+        a: "Channels keep shared conversations organized by topic, while DMs let you move into one-on-one or small-group chats without leaving the app.",
       },
       {
-        q: "Can I track the value of my collection?",
-        a: "Absolutely! ManaCamp automatically fetches current market prices and shows you your collection's total value, updated daily.",
+        q: "Can I use bots in my space?",
+        a: "ManaCamp is built to support bots and interactive tools that help communities coordinate, automate tasks, and add more activity to their spaces.",
       },
       {
-        q: "Is there a limit to how many decks I can create?",
-        a: "Free accounts can create up to 20 decks. Pro subscribers get unlimited deck storage plus advanced deck analytics and sideboard suggestions.",
+        q: "How do I know who&apos;s online or active?",
+        a: "Presence and activity indicators help you see who&apos;s around, who&apos;s active, and when a session is already happening so it&apos;s easy to jump in.",
       },
     ],
   },
@@ -65,8 +65,8 @@ const faqs = [
         a: "First, make sure you're running Windows 10 or 11 (64-bit). Try right-clicking the installer and selecting 'Run as administrator'. If the issue persists, contact our support team.",
       },
       {
-        q: "My collection isn't syncing. How do I fix this?",
-        a: "Check your internet connection and make sure you're signed in. In the app, go to Settings → Sync → Force Sync. If the issue continues, sign out and back in.",
+        q: "My messages or activity aren&apos;t updating. How do I fix this?",
+        a: "Check your connection, make sure you&apos;re still signed in, and restart the app. If the issue continues, contact support with your Windows version and what you were doing when it happened.",
       },
       {
         q: "How do I reset my password?",
@@ -156,19 +156,19 @@ export default function SupportPage() {
                 color: "from-purple-500 to-violet-600",
               },
               {
-                icon: MessageSquare,
-                title: "Live Chat",
-                desc: "Available Mon–Fri, 9am–6pm EST",
-                action: "Start Chat",
-                href: "#",
+                icon: Download,
+                title: "Windows Download",
+                desc: "Install the desktop app and get started",
+                action: "Get Windows App",
+                href: "/#download",
                 color: "from-blue-500 to-cyan-600",
               },
               {
-                icon: BookOpen,
-                title: "Documentation",
-                desc: "Browse guides and tutorials",
-                action: "Read Docs",
-                href: "#",
+                icon: Bell,
+                title: "iOS Updates",
+                desc: "Join the waitlist for launch news",
+                action: "Join Waitlist",
+                href: "/#ios",
                 color: "from-amber-500 to-orange-600",
               },
             ].map((item, i) => {
@@ -274,8 +274,9 @@ export default function SupportPage() {
                   <select className="w-full px-4 py-3 rounded-xl glass border border-white/20 text-white bg-[#0a0a1a] focus:outline-none focus:border-purple-500 transition-colors text-sm">
                     <option value="">Select a topic</option>
                     <option>Account issue</option>
-                    <option>Collection sync</option>
-                    <option>Billing question</option>
+                    <option>Chat or sync issue</option>
+                    <option>Windows install</option>
+                    <option>iOS waitlist</option>
                     <option>Bug report</option>
                     <option>Feature request</option>
                     <option>Other</option>

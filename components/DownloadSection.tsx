@@ -1,31 +1,29 @@
 "use client";
 
 import ScrollReveal from "./ScrollReveal";
-import { Monitor, Download, Shield, Zap, CheckCircle } from "lucide-react";
+import { Bot, CheckCircle, Download, Monitor, Video, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
 const requirements = [
   "Windows 10 / 11 (64-bit)",
-  "4 GB RAM minimum",
-  "500 MB disk space",
-  "Internet connection for sync",
+  "Internet connection recommended",
 ];
 
 const highlights = [
   {
     icon: Zap,
     title: "Lightning Fast",
-    desc: "Native Windows performance with instant search",
+    desc: "Move between channels, DMs, and community spaces without friction.",
   },
   {
-    icon: Shield,
-    title: "Secure & Private",
-    desc: "Your data is encrypted and stays yours",
+    icon: Video,
+    title: "Voice & Screen Share",
+    desc: "Launch live sessions, talk in real time, and share what you&apos;re doing.",
   },
   {
-    icon: Monitor,
-    title: "Desktop Power",
-    desc: "Full keyboard shortcuts and multi-window support",
+    icon: Bot,
+    title: "Bots & Community Tools",
+    desc: "Add utility, music, automation, and interactive functionality to your space.",
   },
 ];
 
@@ -65,7 +63,7 @@ export default function DownloadSection() {
                     ManaCamp for Windows
                   </h3>
                   <p className="text-gray-400 text-sm mb-6">
-                    Version 1.0.0 · Free Download
+                    Desktop App · Available Now
                   </p>
 
                   <a
@@ -111,10 +109,10 @@ export default function DownloadSection() {
                 <span className="gradient-text">your desktop</span>
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed mb-10">
-                The ManaCamp desktop app brings the complete experience to
-                Windows. Manage thousands of cards, build complex decks, and
-                track every game — all with the comfort of a full keyboard and
-                large screen.
+                ManaCamp&apos;s desktop app is designed for the full experience:
+                fast navigation, immersive chat, rich community spaces, voice
+                and video sessions, screen sharing, and room for the tools that
+                make your server feel alive.
               </p>
 
               <div className="space-y-6">

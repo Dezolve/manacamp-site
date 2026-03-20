@@ -16,19 +16,19 @@ const sections = [
     title: "1. Acceptance of Terms",
     content: `By downloading, installing, or using ManaCamp ("the App"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use the App.
 
-These Terms apply to all users of the App, including visitors, registered users, and paying subscribers. We reserve the right to update these Terms at any time. Your continued use of the App after changes constitutes acceptance of the new Terms.`,
+These Terms apply to all users of the App, including visitors and registered users. We reserve the right to update these Terms at any time. Your continued use of the App after changes constitutes acceptance of the new Terms.`,
   },
   {
     id: "use",
     title: "2. Use of the App",
-    content: `ManaCamp grants you a limited, non-exclusive, non-transferable, revocable license to use the App for your personal, non-commercial use.
+    content: `ManaCamp grants you a limited, non-exclusive, non-transferable, revocable license to use the App for your lawful use of the service.
 
 You agree not to:
 • Reverse engineer, decompile, or disassemble the App
 • Use the App for any unlawful purpose
 • Attempt to gain unauthorized access to any part of the App
 • Interfere with or disrupt the App's servers or networks
-• Use automated tools or bots to interact with the App
+  • Use abusive automation, scraping, or unauthorized clients to interact with the App
 • Resell or redistribute the App without express written permission`,
   },
   {
@@ -44,27 +44,26 @@ You may not create accounts using false identities or impersonate any person or 
   {
     id: "content",
     title: "4. User Content",
-    content: `You retain ownership of any content you create within the App (decks, collections, notes). By using the App, you grant ManaCamp a limited, worldwide license to store and process your content solely to provide the service.
+    content: `You retain ownership of any content you create within the App, such as messages, uploads, profile details, and community content. By using the App, you grant ManaCamp a limited, worldwide license to store and process your content solely to provide the service.
 
 You are responsible for ensuring your content does not violate any third-party rights, including intellectual property rights. ManaCamp is not responsible for content accuracy or any losses arising from your content.`,
   },
   {
     id: "subscriptions",
-    title: "5. Subscriptions and Payments",
-    content: `ManaCamp offers a free tier and optional paid subscriptions ("Pro"). By subscribing to Pro:
-• You authorize us to charge your payment method on a recurring basis
-• Subscriptions automatically renew unless cancelled before the renewal date
-• Refunds are available within 14 days of the initial purchase or renewal
-• Prices may change with 30 days' notice
+    title: "5. Billing and Paid Services",
+    content: `ManaCamp may offer paid services or premium features. If you purchase a paid service:
+• Pricing, billing terms, and refund details will be disclosed at the time of purchase
+• You authorize us or our payment processor to charge the payment method you provide
+• Ongoing services may renew automatically unless cancelled before renewal, if disclosed at purchase
 
-You can cancel your subscription at any time from your account settings.`,
+You are responsible for reviewing the applicable purchase terms before completing any transaction.`,
   },
   {
     id: "disclaimer",
     title: "6. Disclaimer of Warranties",
     content: `THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND. MANACAMP DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
 
-ManaCamp does not warrant that the App will be uninterrupted, error-free, or free of viruses or other harmful components. Card pricing data is sourced from third parties and may not reflect current market values.`,
+  ManaCamp does not warrant that the App will be uninterrupted, error-free, or free of viruses or other harmful components.`,
   },
   {
     id: "limitation",
@@ -92,11 +91,7 @@ Any disputes arising from these Terms or your use of the App shall be subject to
     title: "10. Contact",
     content: `If you have questions about these Terms, please contact us:
 
-Email: legal@manacamp.app
-ManaCamp
-123 Gaming Street
-Wilmington, DE 19801
-United States`,
+Email: legal@manacamp.app`,
   },
 ];
 
@@ -106,8 +101,8 @@ const privacySections = [
     title: "Information We Collect",
     content: `We collect information you provide directly to us, such as:
 • Account information (name, email address, password)
-• Collection and deck data you add to the App
-• Payment information (processed securely by Stripe; we do not store card numbers)
+  • Messages, uploads, profile details, and other content you choose to add
+  • Payment information for paid services, when applicable, handled by our payment providers
 • Communications with our support team
 
 We also collect automatically:
@@ -121,7 +116,7 @@ We also collect automatically:
     content: `We use your information to:
 • Provide, maintain, and improve the App
 • Process transactions and send related information
-• Sync your collection and decks across devices
+  • Sync supported account data across devices
 • Send you technical notices and support messages
 • Respond to your comments and questions
 • Analyze usage to improve features
@@ -133,7 +128,6 @@ We do not sell your personal information to third parties.`,
     title: "Information Sharing",
     content: `We may share your information with:
 • Service providers who assist in our operations (cloud hosting, analytics)
-• Business partners with your explicit consent
 • Law enforcement when required by law
 
 All third-party service providers are bound by confidentiality agreements and may only process your data as directed by us.`,
@@ -141,13 +135,9 @@ All third-party service providers are bound by confidentiality agreements and ma
   {
     id: "privacy-security",
     title: "Data Security",
-    content: `We implement industry-standard security measures including:
-• AES-256 encryption for data at rest
-• TLS 1.3 encryption for data in transit
-• Regular security audits and penetration testing
-• Strict access controls for our team
+    content: `We use administrative, technical, and organizational measures designed to protect your information.
 
-No system is completely secure. We encourage you to use a strong, unique password for your account.`,
+No system is completely secure. We encourage you to use a strong, unique password for your account and to protect access to your devices.`,
   },
   {
     id: "privacy-rights",

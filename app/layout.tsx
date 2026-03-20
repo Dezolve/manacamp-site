@@ -4,21 +4,21 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "ManaCamp – Your Ultimate Card Game Companion",
+  title: "ManaCamp – Channels, chat, voice, and sessions",
   description:
-    "ManaCamp is the ultimate companion app for card game enthusiasts. Track your collection, build decks, and dominate the battlefield. Coming soon on iOS and Windows.",
-  keywords: ["ManaCamp", "card game", "deck builder", "collection tracker", "iOS app", "Windows app"],
+    "ManaCamp is a modern community platform for channels, DMs, presence, voice, video, screen sharing, bots, and sessions. Windows available now. iOS coming soon.",
+  keywords: ["ManaCamp", "community platform", "channels", "voice chat", "video chat", "Windows app", "iOS app"],
   openGraph: {
-    title: "ManaCamp – Your Ultimate Card Game Companion",
+    title: "ManaCamp – Channels, chat, voice, and sessions",
     description:
-      "Track your collection, build decks, and dominate the battlefield.",
+      "A modern home for channels, DMs, presence, voice, video, screen sharing, bots, and sessions.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ManaCamp – Your Ultimate Card Game Companion",
+    title: "ManaCamp – Channels, chat, voice, and sessions",
     description:
-      "Track your collection, build decks, and dominate the battlefield.",
+      "A modern home for channels, DMs, presence, voice, video, screen sharing, bots, and sessions.",
   },
 };
 

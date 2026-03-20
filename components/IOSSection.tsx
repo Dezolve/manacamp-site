@@ -37,18 +37,19 @@ export default function IOSSection() {
               </span>
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
-              We&apos;re bringing the full ManaCamp experience to iOS. Get
-              notified when it launches and be the first to download it on your
-              iPhone or iPad.
+              We&apos;re bringing ManaCamp to iPhone and iPad so your community
+              stays with you everywhere. Keep up with channels and DMs, check
+              activity, manage notifications, and stay connected when you&apos;re
+              away from your desktop.
             </p>
 
             {/* Features list */}
             <ul className="space-y-3 mb-8">
               {[
-                "Native iOS design with smooth animations",
-                "iCloud sync across all your Apple devices",
-                "Widget support for quick collection stats",
-                "Apple Watch companion app",
+                "Stay connected to channels and DMs on the go",
+                "Check activity, replies, and notifications in real time",
+                "Follow conversations and community activity from anywhere",
+                "Built for a fast, clean, native-feeling experience",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-gray-300">
                   <div className="w-5 h-5 rounded-full bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center flex-shrink-0">
@@ -60,6 +61,9 @@ export default function IOSSection() {
             </ul>
 
             {/* Notify form */}
+            <p className="text-sm text-gray-400 mb-3">
+              Get notified when the iOS app is ready.
+            </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
@@ -95,25 +99,37 @@ export default function IOSSection() {
                     </div>
                     {/* App content preview */}
                     <div className="px-4 pt-4">
-                      <div className="text-white font-bold text-lg mb-1">My Collection</div>
-                      <div className="text-purple-300 text-xs mb-4">2,847 cards · $1,234 value</div>
-                      <div className="grid grid-cols-3 gap-2 mb-4">
-                        {Array.from({ length: 6 }).map((_, i) => (
+                      <div className="text-white font-bold text-lg mb-1">Campfire</div>
+                      <div className="text-purple-300 text-xs mb-4">3 friends online now</div>
+                      <div className="space-y-2 mb-4">
+                        {[
+                          "# general",
+                          "# sessions",
+                          "# clips",
+                          "DMs",
+                        ].map((item, i) => (
                           <div
-                            key={i}
-                            className="aspect-[2/3] rounded-lg"
+                            key={item}
+                            className="h-10 rounded-xl flex items-center px-3 text-sm text-white/80"
                             style={{
-                              background: `linear-gradient(135deg, hsl(${270 + i * 20}, 60%, ${30 + i * 5}%), hsl(${290 + i * 15}, 50%, 20%))`,
+                              background: `linear-gradient(135deg, hsl(${270 + i * 16}, 45%, ${22 + i * 4}%), hsl(${290 + i * 12}, 45%, 16%))`,
                             }}
-                          />
+                          >
+                            {item}
+                          </div>
                         ))}
                       </div>
-                      <div className="h-2 rounded-full bg-purple-500/30 mb-2">
-                        <div className="h-2 w-3/4 rounded-full bg-gradient-to-r from-purple-500 to-violet-500" />
+                      <div className="rounded-xl bg-white/5 p-3 mb-2">
+                        <div className="text-[11px] text-gray-400 mb-1">Activity</div>
+                        <div className="text-xs text-white/80">Kai started a voice session</div>
                       </div>
-                      <div className="flex gap-2">
-                        <div className="flex-1 h-8 rounded-lg bg-purple-500/20" />
-                        <div className="flex-1 h-8 rounded-lg bg-amber-500/20" />
+                      <div className="flex gap-2 text-[11px] text-white/70">
+                        <div className="flex-1 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                          Friends
+                        </div>
+                        <div className="flex-1 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center">
+                          Sessions
+                        </div>
                       </div>
                     </div>
                   </div>

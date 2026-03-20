@@ -2,60 +2,60 @@
 
 import ScrollReveal from "./ScrollReveal";
 import {
-  Library,
-  Layers,
-  BarChart3,
-  Search,
+  Bot,
+  Hash,
+  MessagesSquare,
   Users,
-  Wifi,
+  Video,
+  MonitorUp,
 } from "lucide-react";
 
 const features = [
   {
-    icon: Library,
-    title: "Collection Tracker",
+    icon: Hash,
+    title: "Channels",
     description:
-      "Catalog every card you own with smart search and filtering. Know your collection's value at a glance.",
+      "Organize conversations into dedicated spaces for your groups, topics, and communities. Keep everything easy to follow and always in the right place.",
     color: "from-purple-500 to-violet-600",
     highlight: "bg-purple-500/10 border-purple-500/20",
   },
   {
-    icon: Layers,
-    title: "Deck Builder",
+    icon: MessagesSquare,
+    title: "Direct Messages",
     description:
-      "Craft powerful decks with our intelligent builder. Get real-time suggestions and mana curve analysis.",
+      "Start one-on-one or small-group conversations instantly. Move naturally between private chats and shared community spaces.",
     color: "from-amber-500 to-orange-600",
     highlight: "bg-amber-500/10 border-amber-500/20",
   },
   {
-    icon: BarChart3,
-    title: "Game Analytics",
+    icon: Video,
+    title: "Voice & Video",
     description:
-      "Track your win rates, favorite strategies, and opponent patterns to constantly improve your play.",
+      "Jump into live sessions when text isn&apos;t enough. Hang out, talk strategy, catch up, or collaborate in real time.",
     color: "from-emerald-500 to-teal-600",
     highlight: "bg-emerald-500/10 border-emerald-500/20",
   },
   {
-    icon: Search,
-    title: "Card Database",
+    icon: MonitorUp,
+    title: "Screen Sharing",
     description:
-      "Search millions of cards across all sets with powerful filters for power, toughness, colors, and type.",
+      "Share your screen for walkthroughs, help, watch-together moments, or live collaboration without leaving the app.",
     color: "from-blue-500 to-cyan-600",
     highlight: "bg-blue-500/10 border-blue-500/20",
   },
   {
     icon: Users,
-    title: "Community",
+    title: "Friends & Presence",
     description:
-      "Share decks, trade cards, and connect with players worldwide. Find your next big tournament match.",
+      "See who&apos;s around, who&apos;s active, and who&apos;s in session. Presence makes your community feel alive and ready to join.",
     color: "from-pink-500 to-rose-600",
     highlight: "bg-pink-500/10 border-pink-500/20",
   },
   {
-    icon: Wifi,
-    title: "Offline Ready",
+    icon: Bot,
+    title: "Bots & Activity",
     description:
-      "Access your collection and decks anywhere, even without internet. Sync automatically when you reconnect.",
+      "Extend your server with bots, automations, music, utility features, and interactive tools that make your space more powerful.",
     color: "from-indigo-500 to-purple-600",
     highlight: "bg-indigo-500/10 border-indigo-500/20",
   },
@@ -78,11 +78,11 @@ export default function FeaturesSection() {
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             Everything you need to{" "}
-            <span className="gradient-text">play smarter</span>
+            <span className="gradient-text">run your space</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            ManaCamp is packed with powerful tools designed for serious players
-            who want to take their game to the next level.
+            ManaCamp gives communities the tools to chat, coordinate, hang out,
+            and stay connected across channels, DMs, voice, video, and bots.
           </p>
         </ScrollReveal>
 

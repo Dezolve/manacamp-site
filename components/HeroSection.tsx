@@ -54,7 +54,7 @@ export default function HeroSection() {
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-purple-500/30 text-sm text-purple-300 mb-8"
         >
           <Zap className="w-3.5 h-3.5 text-amber-400" fill="currentColor" />
-          <span>iOS App Coming Soon · Windows Available Now</span>
+          <span>iOS Coming Soon · Windows Available Now</span>
         </motion.div>
 
         {/* Headline */}
@@ -64,11 +64,11 @@ export default function HeroSection() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-5xl sm:text-6xl lg:text-8xl font-bold tracking-tight mb-6"
         >
-          <span className="text-white">Your Ultimate</span>
+          <span className="text-white">Your community,</span>
           <br />
-          <span className="gradient-text">Card Game</span>
+          <span className="gradient-text">channels, and sessions</span>
           <br />
-          <span className="text-white">Companion</span>
+          <span className="text-white">all in one place.</span>
         </motion.h1>
 
         {/* Subheading */}
@@ -78,8 +78,10 @@ export default function HeroSection() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10"
         >
-          Track your collection, build winning decks, and manage your gameplay —
-          all in one beautifully designed app built for serious players.
+          ManaCamp is a modern community platform built for real-time
+          conversation. Create channels, jump into DMs, see who&apos;s around,
+          launch voice or video sessions, share your screen, and bring your
+          space to life with bots and activity.
         </motion.p>
 
         {/* CTAs */}
@@ -99,7 +101,7 @@ export default function HeroSection() {
             href="#ios"
             className="w-full sm:w-auto px-8 py-4 rounded-full glass border border-white/20 text-white font-semibold text-base hover:bg-white/10 transition-all duration-200 hover:scale-105"
           >
-            iOS — Coming Soon
+            Join iOS Waitlist
           </Link>
         </motion.div>
 
@@ -110,15 +112,17 @@ export default function HeroSection() {
           transition={{ delay: 1.5 }}
           className="mt-20 flex flex-col items-center gap-2"
         >
-          <span className="text-xs text-gray-500 uppercase tracking-widest">
-            Explore
-          </span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          >
-            <ChevronDown className="w-5 h-5 text-gray-500" />
-          </motion.div>
+          <Link href="#features" className="flex flex-col items-center gap-2">
+            <span className="text-xs text-gray-500 uppercase tracking-widest">
+              See Features
+            </span>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+            >
+              <ChevronDown className="w-5 h-5 text-gray-500" />
+            </motion.div>
+          </Link>
         </motion.div>
       </div>
     </section>
