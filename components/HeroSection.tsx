@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import BrandMark from "@/components/BrandMark";
+import BrandWordmark from "@/components/BrandWordmark";
 
 export default function HeroSection() {
   return (
@@ -158,7 +159,11 @@ export default function HeroSection() {
                             : "text-text-secondary bg-[rgba(255,255,255,0.02)]"
                         }`}
                       >
-                        {item}
+                        {index === 0 ? (
+                          <BrandWordmark className="font-semibold" glow={false} />
+                        ) : (
+                          item
+                        )}
                       </div>
                     ))}
                   </div>

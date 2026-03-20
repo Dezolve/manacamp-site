@@ -3,6 +3,7 @@
 import ScrollReveal from "./ScrollReveal";
 import { motion } from "framer-motion";
 import { Apple, Bell, Star, Smartphone } from "lucide-react";
+import BrandWordmark from "./BrandWordmark";
 
 export default function IOSSection() {
   return (
@@ -87,7 +88,7 @@ export default function IOSSection() {
                       </div>
                     </div>
                     <div className="px-4 pt-4">
-                      <div className="text-white font-bold text-base sm:text-lg mb-1">ManaCamp</div>
+                      <BrandWordmark className="text-base sm:text-lg font-bold mb-1" glow={false} />
                       <div className="text-[rgb(182,224,255)] text-xs mb-4">3 friends online now</div>
                       <div className="space-y-2 mb-4">
                         {[

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import BrandMark from "@/components/BrandMark";
+import BrandWordmark from "@/components/BrandWordmark";
 
 const navLinks = [
   { href: "/#features", label: "Features" },
@@ -38,20 +39,17 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || isOpen
-          ? "border-b border-border-subtle bg-[rgba(6,10,22,0.78)] backdrop-blur-xl"
+          ? "border-b border-border-subtle bg-[rgba(6,10,22,0.78)] shadow-[0_18px_40px_rgba(2,8,22,0.32)] backdrop-blur-xl"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 gap-4">
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="-ml-1.5 inline-flex items-center gap-2 rounded-full px-1.5 py-1 transition-colors duration-200 group hover:bg-white/[0.03]">
             <div className="icon-tile w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 group-hover:border-[rgba(255,158,88,0.34)] group-hover:shadow-[0_0_24px_rgba(90,178,255,0.18)]">
               <BrandMark className="w-4 h-4 text-accent-primary" />
             </div>
-            <span className="text-xl font-semibold tracking-[0.02em]">
-              <span className="brand-wordmark-mana">Mana</span>
-              <span className="brand-wordmark-camp">Camp</span>
-            </span>
+            <BrandWordmark className="text-xl font-semibold tracking-[0.02em]" />
           </Link>
 
           <div className="hidden md:flex items-center gap-5 lg:gap-6">
@@ -59,7 +57,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm whitespace-nowrap text-text-secondary hover:text-white transition-colors duration-200"
+                className="rounded-full px-3 py-2 text-sm whitespace-nowrap text-text-secondary hover:bg-white/[0.04] hover:text-white transition-colors duration-200"
               >
                 {link.label}
               </Link>
