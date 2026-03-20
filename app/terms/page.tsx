@@ -156,14 +156,14 @@ To exercise these rights, contact us at privacy@manacamp.app.`,
 export default function TermsPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero */}
       <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-b from-indigo-950/40 to-transparent" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,16,32,0.58),transparent)]" />
+          <div className="absolute left-1/2 top-16 -translate-x-1/2 w-[520px] h-[260px] ambient-blue rounded-full blur-3xl opacity-80" />
         </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <ScrollReveal>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass border border-indigo-500/30 text-sm text-indigo-300 mb-6">
+            <div className="eyebrow-pill text-sm mb-6">
               <FileText className="w-3.5 h-3.5" />
               Legal
             </div>
@@ -171,19 +171,18 @@ export default function TermsPage() {
               Terms &{" "}
               <span className="gradient-text">Conditions</span>
             </h1>
-            <p className="text-gray-400 text-sm">
+            <p className="text-text-secondary text-sm">
               Last updated: {lastUpdated}
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* Table of contents */}
-      <section className="pb-8">
+      <section className="section-divider pb-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="glass border border-white/10 rounded-2xl p-6">
-              <h2 className="text-sm font-semibold text-gray-300 uppercase tracking-widest mb-4">
+            <div className="panel rounded-2xl p-6">
+              <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-[0.28em] mb-4">
                 Table of Contents
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -191,7 +190,7 @@ export default function TermsPage() {
                   <a
                     key={s.id}
                     href={`#${s.id}`}
-                    className="text-sm text-purple-300 hover:text-purple-200 transition-colors"
+                    className="text-sm text-[rgb(182,224,255)] hover:text-white transition-colors"
                   >
                     {s.title}
                   </a>
@@ -202,19 +201,18 @@ export default function TermsPage() {
         </div>
       </section>
 
-      {/* Terms sections */}
-      <section className="pb-16">
+      <section className="section-divider pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
           {sections.map((section, i) => (
             <ScrollReveal key={section.id} delay={i * 0.04}>
               <div
                 id={section.id}
-                className="glass border border-white/10 rounded-2xl p-6 scroll-mt-24"
+                className="panel rounded-2xl p-6 scroll-mt-24"
               >
                 <h2 className="text-lg font-bold text-white mb-4">
                   {section.title}
                 </h2>
-                <div className="text-sm text-gray-400 leading-relaxed whitespace-pre-line">
+                <div className="text-sm text-text-secondary leading-relaxed whitespace-pre-line">
                   {section.content}
                 </div>
               </div>
@@ -223,13 +221,12 @@ export default function TermsPage() {
         </div>
       </section>
 
-      {/* Privacy policy */}
-      <section id="privacy" className="pb-24 scroll-mt-20">
+      <section id="privacy" className="section-divider pb-24 scroll-mt-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-600 to-violet-600 flex items-center justify-center">
-                <Shield className="w-4 h-4 text-white" />
+              <div className="icon-tile w-8 h-8 rounded-lg flex items-center justify-center">
+                <Shield className="w-4 h-4 text-accent-primary" />
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-white">
                 Privacy Policy
@@ -242,12 +239,12 @@ export default function TermsPage() {
               <ScrollReveal key={section.id} delay={i * 0.05}>
                 <div
                   id={section.id}
-                  className="glass border border-white/10 rounded-2xl p-6 scroll-mt-24"
+                  className="panel rounded-2xl p-6 scroll-mt-24"
                 >
                   <h3 className="text-base font-bold text-white mb-3">
                     {section.title}
                   </h3>
-                  <div className="text-sm text-gray-400 leading-relaxed whitespace-pre-line">
+                  <div className="text-sm text-text-secondary leading-relaxed whitespace-pre-line">
                     {section.content}
                   </div>
                 </div>
