@@ -2,5 +2,15 @@
   "framework": "nextjs",
   "buildCommand": "pnpm run build",
   "installCommand": "pnpm install",
-  "devCommand": "pnpm run dev"
+  "devCommand": "pnpm run dev",
+  "rewrites": [
+    {
+      "source": "/uploads/desktop-updates",
+      "destination": "https://digitalstorm.tplinkdns.com/uploads/desktop-updates"
+    },
+    {
+      "source": "/uploads/desktop-updates/:path*",
+      "destination": "https://digitalstorm.tplinkdns.com/uploads/desktop-updates/:path*"
+    }
+  ]
 }
