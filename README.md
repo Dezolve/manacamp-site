@@ -14,6 +14,7 @@ A dark, product-aligned marketing site for ManaCamp, a modern community platform
 ## Pages
 
 - `/` — Home: hero, product highlights, Windows download, iOS preview, CTA
+- `/download` — Branded download page that resolves the latest Windows installer from the desktop update feed
 - `/support` — Support center with FAQ accordion and contact form
 - `/privacy` — Dedicated privacy policy
 - `/terms` — Terms & Conditions

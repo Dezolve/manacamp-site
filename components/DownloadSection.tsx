@@ -58,20 +58,19 @@ export default function DownloadSection() {
                     ManaCamp for Windows
                   </h3>
                   <p className="text-text-secondary text-sm mb-6">
-                    Desktop App Preview · Available Now
+                    Latest desktop build · Available now
                   </p>
 
                   <a
-                    href="/download/manacamp-windows-setup.exe"
+                    href="/download"
                     className="btn-primary flex items-center justify-center gap-3 w-full px-5 sm:px-6 py-3.5 sm:py-4 rounded-2xl font-semibold transition-all duration-200 hover:-translate-y-0.5 mb-4"
-                    download
                   >
                     <Download className="w-5 h-5" />
-                    Download Preview for Windows (.exe)
+                    Download ManaCamp for Windows (.exe)
                   </a>
 
                   <p className="text-xs text-text-muted text-center">
-                    Preview build · Free download · No credit card required
+                    Latest build · Free download · No credit card required
                   </p>
                 </div>
               </div>

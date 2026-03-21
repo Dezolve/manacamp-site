@@ -8,7 +8,7 @@ import BrandWordmark from "@/components/BrandWordmark";
 
 const navLinks = [
   { href: "/#features", label: "Features" },
-  { href: "/#download", label: "Download" },
+  { href: "/download", label: "Download" },
   { href: "/privacy", label: "Privacy" },
   { href: "/support", label: "Support" },
   { href: "/terms", label: "Terms" },
@@ -63,7 +63,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/#download"
+              href="/download"
               className="btn-primary inline-flex h-10 shrink-0 items-center justify-center rounded-full px-5 text-sm leading-none font-medium transition-all duration-200"
             >
               Get the App
@@ -95,7 +95,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/#download"
+              href="/download"
               onClick={() => setIsOpen(false)}
               className="btn-primary mt-2 inline-flex min-h-0 items-center justify-center rounded-full px-4 py-3 text-sm leading-none font-medium text-center transition-all duration-200"
             >

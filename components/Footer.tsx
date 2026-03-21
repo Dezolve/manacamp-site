@@ -6,7 +6,7 @@ import BrandWordmark from "@/components/BrandWordmark";
 const footerLinks = {
   Product: [
     { href: "/#features", label: "Features" },
-    { href: "/#download", label: "Download" },
+    { href: "/download", label: "Download" },
     { href: "/#ios", label: "iOS App" },
   ],
   Resources: [

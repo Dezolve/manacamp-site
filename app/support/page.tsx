@@ -12,7 +12,7 @@ const faqs = [
     questions: [
       {
         q: "How do I download ManaCamp for Windows?",
-        a: "Visit our homepage and click the 'Download for Windows' button. The installer will guide you through the setup process. ManaCamp requires Windows 10 or 11 (64-bit).",
+        a: "Visit our homepage and click the 'Download for Windows' button, or go directly to /download. The installer will guide you through the setup process. ManaCamp requires Windows 10 or 11 (64-bit).",
       },
       {
         q: "Is ManaCamp free to use?",
@@ -160,7 +160,7 @@ export default function SupportPage() {
                 title: "Windows Download",
                 desc: "Install the desktop app and get started",
                 action: "Get Windows App",
-                href: "/#download",
+                href: "/download",
                 iconClass: "text-accent-primary",
                 tileClass: "border-[rgba(90,178,255,0.22)] bg-[rgba(90,178,255,0.08)]",
               },

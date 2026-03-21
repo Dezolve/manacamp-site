@@ -26,7 +26,7 @@ export default function CTASection() {
               </p>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
                 <Link
-                  href="#download"
+                  href="/download"
                   className="btn-primary w-full sm:w-auto px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold text-base transition-all duration-200 flex items-center justify-center gap-2 hover:-translate-y-0.5"
                 >
                   Get ManaCamp for Windows
