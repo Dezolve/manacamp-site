@@ -3,14 +3,16 @@
   "buildCommand": "pnpm run build",
   "installCommand": "pnpm install",
   "devCommand": "pnpm run dev",
-  "rewrites": [
+  "redirects": [
     {
       "source": "/uploads/desktop-updates",
-      "destination": "https://digitalstorm.tplinkdns.com/uploads/desktop-updates"
+      "destination": "https://downloads.manacamp.com",
+      "permanent": false
     },
     {
       "source": "/uploads/desktop-updates/:path*",
-      "destination": "https://digitalstorm.tplinkdns.com/uploads/desktop-updates/:path*"
+      "destination": "https://downloads.manacamp.com/:path*",
+      "permanent": false
     }
   ]
 }
