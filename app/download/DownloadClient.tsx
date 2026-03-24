@@ -27,6 +27,8 @@ type ErrorPayload = {
   manifestPath?: string;
 };
 
+const DOWNLOADS_MANIFEST_URL = "https://downloads.manacamp.com/latest.yml";
+
 const steps = [
   "Checking the public desktop update feed",
   "Resolving the latest Windows installer",
@@ -234,7 +236,9 @@ export default function DownloadClient() {
                   Download latest build
                 </a>
                 <a
-                  href={download?.manifestPath ?? "/uploads/desktop-updates/latest.yml"}
+                  href={download?.manifestPath ?? DOWNLOADS_MANIFEST_URL}
+                  target="_blank"
+                  rel="noreferrer"
                   className="btn-secondary inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5"
                 >
                   <ExternalLink className="w-4 h-4" />
@@ -272,7 +276,7 @@ export default function DownloadClient() {
               <ul className="space-y-3 text-sm text-text-secondary leading-relaxed">
                 <li>The site resolves the installer from the public update manifest rather than hardcoding a versioned file name.</li>
                 <li>When the feed is updated, the download page automatically starts serving the newest installer.</li>
-                <li>The same-origin path keeps the public URL stable even if the upstream storage host changes later.</li>
+                <li>The API returns production URLs from downloads.manacamp.com for both the manifest and installer.</li>
               </ul>
             </div>
 
@@ -298,8 +302,8 @@ export default function DownloadClient() {
                 <div className="flex items-center justify-between gap-4">
                   <dt className="text-text-muted">Manifest</dt>
                   <dd className="text-right">
-                    <a href="/uploads/desktop-updates/latest.yml" className="text-[rgb(182,224,255)] hover:text-white transition-colors">
-                      /uploads/desktop-updates/latest.yml
+                    <a href={download?.manifestPath ?? DOWNLOADS_MANIFEST_URL} target="_blank" rel="noreferrer" className="text-[rgb(182,224,255)] hover:text-white transition-colors">
+                      {download?.manifestPath ?? DOWNLOADS_MANIFEST_URL}
                     </a>
                   </dd>
                 </div>
@@ -311,7 +315,7 @@ export default function DownloadClient() {
               <ol className="space-y-3 text-sm text-text-secondary leading-relaxed list-decimal pl-5">
                 <li>Wait a few seconds for the manifest lookup to complete.</li>
                 <li>Use the manual download button once the latest build has been resolved.</li>
-                <li>If the feed is unavailable, contact support after the reverse proxy for /uploads/desktop-updates is live.</li>
+                <li>If the feed is unavailable, contact support and include the manifest URL shown above.</li>
               </ol>
             </div>
           </motion.aside>

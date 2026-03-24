@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
-const MANIFEST_PATH = "/uploads/desktop-updates/latest.yml";
+const DOWNLOADS_BASE_URL = "https://downloads.manacamp.com";
+const MANIFEST_URL = `${DOWNLOADS_BASE_URL}/latest.yml`;
 
 function extractScalarValue(manifest: string, key: string) {
   const expression = new RegExp(`^${key}:\\s*(.+)$`, "m");
@@ -22,17 +23,14 @@ function extractInstallerPath(manifest: string) {
     return null;
   }
 
-  const normalizedRelativePath = rawPath.replace(/^\.\//, "");
-  return normalizedRelativePath.startsWith("/uploads/desktop-updates/")
-    ? normalizedRelativePath
-    : `/uploads/desktop-updates/${normalizedRelativePath}`;
+  const normalizedPath = rawPath.replace(/^\.\//, "");
+  return new URL(normalizedPath, `${DOWNLOADS_BASE_URL}/`).toString();
 }
 
 export const dynamic = "force-dynamic";
 
-export async function GET(request: Request) {
-  const manifestUrl = new URL(MANIFEST_PATH, request.url);
-  const manifestResponse = await fetch(manifestUrl, {
+export async function GET() {
+  const manifestResponse = await fetch(MANIFEST_URL, {
     cache: "no-store",
     headers: {
       accept: "text/yaml, text/plain;q=0.9, */*;q=0.8",
@@ -43,7 +41,7 @@ export async function GET(request: Request) {
     return NextResponse.json(
       {
         error: "Desktop update manifest unavailable.",
-        manifestPath: MANIFEST_PATH,
+        manifestPath: MANIFEST_URL,
       },
       {
         status: 502,
@@ -61,7 +59,7 @@ export async function GET(request: Request) {
     return NextResponse.json(
       {
         error: "Desktop update manifest did not include an installer path.",
-        manifestPath: MANIFEST_PATH,
+        manifestPath: MANIFEST_URL,
       },
       {
         status: 502,
@@ -75,7 +73,7 @@ export async function GET(request: Request) {
   return NextResponse.json(
     {
       downloadPath,
-      manifestPath: MANIFEST_PATH,
+      manifestPath: MANIFEST_URL,
       version: extractScalarValue(manifest, "version"),
       releaseDate: extractScalarValue(manifest, "releaseDate"),
     },
