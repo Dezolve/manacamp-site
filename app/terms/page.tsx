@@ -89,7 +89,9 @@ We are not obligated to publish detailed explanations of moderation decisions, b
     title: "7. Community Guidelines",
     content: `Your use of ManaCamp is also subject to our Community Guidelines, which describe expected conduct and prohibited behavior in more practical terms. The Community Guidelines are incorporated into these Terms by reference.
 
-If there is a conflict between these Terms and the Community Guidelines, these Terms control to the extent of the conflict.`,
+If there is a conflict between these Terms and the Community Guidelines, these Terms control to the extent of the conflict.
+
+Community Guidelines: https://manacamp.app/guidelines`,
   },
   {
     id: "paid-services",
@@ -204,7 +206,25 @@ export default function TermsPage() {
       </section>
 
       <section className="section-divider pb-20 sm:pb-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-4">
+          <ScrollReveal>
+            <div className="panel rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                  Community Guidelines
+                </h2>
+                <p className="text-sm text-text-secondary leading-relaxed max-w-2xl">
+                  Our Community Guidelines describe expected conduct and prohibited behavior in practical terms. They are incorporated into these Terms by reference.
+                </p>
+              </div>
+              <Link
+                href="/guidelines"
+                className="btn-secondary rounded-full px-5 py-3 text-sm font-medium text-center transition-all duration-200"
+              >
+                View Community Guidelines
+              </Link>
+            </div>
+          </ScrollReveal>
           <ScrollReveal>
             <div className="panel rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
