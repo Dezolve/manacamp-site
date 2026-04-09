@@ -84,17 +84,17 @@ export default function GuidelinesPage() {
             <div className="panel rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-                  Terms &amp; Conditions
+                  Terms & Conditions
                 </h2>
                 <p className="text-sm text-text-secondary leading-relaxed max-w-2xl">
-                  These Community Guidelines are incorporated into our Terms &amp; Conditions. Review the full legal terms governing your use of ManaCamp.
+                  These Community Guidelines are incorporated into our Terms & Conditions. Review the full legal terms governing your use of ManaCamp.
                 </p>
               </div>
               <Link
                 href="/terms"
                 className="btn-secondary rounded-full px-5 py-3 text-sm font-medium text-center transition-all duration-200"
               >
-                View Terms &amp; Conditions
+                View Terms & Conditions
               </Link>
             </div>
           </ScrollReveal>

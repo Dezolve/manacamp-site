@@ -91,7 +91,7 @@ We are not obligated to publish detailed explanations of moderation decisions, b
 
 If there is a conflict between these Terms and the Community Guidelines, these Terms control to the extent of the conflict.
 
-Community Guidelines: manacamp.app/guidelines`,
+Community Guidelines: https://manacamp.app/guidelines`,
   },
   {
     id: "paid-services",
