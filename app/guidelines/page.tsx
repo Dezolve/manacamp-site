@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import ScrollReveal from "@/components/ScrollReveal";
 import Link from "next/link";
 import { BookOpen } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
+import LegalNav from "@/components/LegalNav";
 import { legalLastUpdated, guidelineSections } from "@/app/legalContent";
 
 export const metadata: Metadata = {
-  title: "Community Guidelines – ManaCamp",
+  title: "Community Guidelines - ManaCamp",
   description:
     "Read ManaCamp's Community Guidelines and learn what behavior is expected on the platform.",
 };
@@ -25,12 +26,19 @@ export default function GuidelinesPage() {
               Legal
             </div>
             <h1 className="text-3xl sm:text-6xl font-bold text-white mb-4 text-balance">
-              Community{" "}
-              <span className="gradient-text">Guidelines</span>
+              Community <span className="gradient-text">Guidelines</span>
             </h1>
             <p className="text-text-secondary text-sm">
               Last updated: {legalLastUpdated}
             </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="section-divider pb-6 sm:pb-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <ScrollReveal>
+            <LegalNav current="guidelines" />
           </ScrollReveal>
         </div>
       </section>
@@ -79,7 +87,7 @@ export default function GuidelinesPage() {
       </section>
 
       <section className="section-divider pb-20 sm:pb-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-4">
           <ScrollReveal>
             <div className="panel rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
@@ -95,6 +103,24 @@ export default function GuidelinesPage() {
                 className="btn-secondary rounded-full px-5 py-3 text-sm font-medium text-center transition-all duration-200"
               >
                 View Terms & Conditions
+              </Link>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal>
+            <div className="panel rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                  Privacy Policy
+                </h2>
+                <p className="text-sm text-text-secondary leading-relaxed max-w-2xl">
+                  Read how we collect, use, and protect your data across ManaCamp services.
+                </p>
+              </div>
+              <Link
+                href="/privacy"
+                className="btn-secondary rounded-full px-5 py-3 text-sm font-medium text-center transition-all duration-200"
+              >
+                View Privacy Policy
               </Link>
             </div>
           </ScrollReveal>

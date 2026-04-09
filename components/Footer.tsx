@@ -11,12 +11,11 @@ const footerLinks = {
   ],
   Resources: [
     { href: "/support", label: "Support" },
+    { href: "/guidelines", label: "Community Guidelines" },
     { href: "/terms", label: "Terms & Conditions" },
     { href: "/privacy", label: "Privacy Policy" },
   ],
-  Contact: [
-    { href: "mailto:hello@manacamp.app", label: "hello@manacamp.app" },
-  ],
+  Contact: [{ href: "mailto:hello@manacamp.app", label: "hello@manacamp.app" }],
 };
 
 export default function Footer() {
@@ -64,10 +63,11 @@ export default function Footer() {
           </div>
 
           {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category} className={category === "Contact" ? "col-span-2 sm:col-span-1" : "col-span-1"}>
-              <h3 className="text-sm font-semibold text-white mb-3">
-                {category}
-              </h3>
+            <div
+              key={category}
+              className={category === "Contact" ? "col-span-2 sm:col-span-1" : "col-span-1"}
+            >
+              <h3 className="text-sm font-semibold text-white mb-3">{category}</h3>
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link.href}>
@@ -86,7 +86,7 @@ export default function Footer() {
 
         <div className="mt-10 pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left">
           <p className="text-xs text-text-muted text-balance">
-            © {new Date().getFullYear()} ManaCamp. All rights reserved.
+            (c) {new Date().getFullYear()} ManaCamp. All rights reserved.
           </p>
           <div className="flex flex-col items-center sm:items-end gap-1">
             <p className="text-xs text-text-muted text-balance">
@@ -98,7 +98,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-xs text-[rgb(182,224,255)] hover:text-white transition-colors"
             >
-              By DezolveLabs · DezolveLabs.com
+              By DezolveLabs | DezolveLabs.com
             </a>
           </div>
         </div>

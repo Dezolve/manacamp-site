@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import ScrollReveal from "@/components/ScrollReveal";
 import Link from "next/link";
 import { FileText } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
+import LegalNav from "@/components/LegalNav";
 import { legalLastUpdated } from "@/app/legalContent";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions – ManaCamp",
+  title: "Terms & Conditions - ManaCamp",
   description:
     "Read ManaCamp's Terms of Service and the rules governing use of the platform.",
 };
@@ -22,10 +23,10 @@ These Terms apply to all users of the service, including visitors, registered us
     id: "eligibility",
     title: "2. Eligibility and Account Registration",
     content: `You may need to create an account to access certain features of ManaCamp. When creating and maintaining an account, you agree to:
-• Provide accurate and complete information
-• Keep your credentials secure and confidential
-• Be responsible for activity that occurs under your account
-• Notify us promptly of any unauthorized access or security incident
+- Provide accurate and complete information
+- Keep your credentials secure and confidential
+- Be responsible for activity that occurs under your account
+- Notify us promptly of any unauthorized access or security incident
 
 You may not create an account using false information, impersonate another person or entity, or create accounts to evade enforcement actions. We may suspend, restrict, or terminate accounts that violate these Terms or create risk for ManaCamp or its users.`,
   },
@@ -35,12 +36,12 @@ You may not create an account using false information, impersonate another perso
     content: `Subject to your compliance with these Terms, ManaCamp grants you a limited, non-exclusive, non-transferable, revocable license to access and use the service for its intended lawful purposes.
 
 You agree not to:
-• Reverse engineer, decompile, or disassemble the service
-• Use ManaCamp for unlawful, fraudulent, or harmful purposes
-• Attempt to gain unauthorized access to accounts, systems, or data
-• Interfere with the operation, integrity, or security of the service
-• Use scraping, abusive automation, bots, or unauthorized clients except where expressly permitted
-• Resell, redistribute, sublicense, or commercially exploit ManaCamp without written permission`,
+- Reverse engineer, decompile, or disassemble the service
+- Use ManaCamp for unlawful, fraudulent, or harmful purposes
+- Attempt to gain unauthorized access to accounts, systems, or data
+- Interfere with the operation, integrity, or security of the service
+- Use scraping, abusive automation, bots, or unauthorized clients except where expressly permitted
+- Resell, redistribute, sublicense, or commercially exploit ManaCamp without written permission`,
   },
   {
     id: "user-content",
@@ -57,14 +58,14 @@ You are solely responsible for the User Content you create or share. You represe
     content: `ManaCamp has no tolerance for objectionable content or abusive users.
 
 You may not use ManaCamp to create, share, promote, or organize content or conduct involving:
-• Harassment, bullying, or severe targeted abuse
-• Hate speech, slurs, or dehumanizing content directed at protected groups
-• Threats of violence or content encouraging serious physical harm
-• Sexual exploitation, sexual abuse, or coercive sexual content
-• Content involving the sexual exploitation of minors
-• Spam, scams, phishing, impersonation, or fraud
-• Illegal activity or content that violates the rights of others
-• Evasion of moderation, enforcement, or safety systems
+- Harassment, bullying, or severe targeted abuse
+- Hate speech, slurs, or dehumanizing content directed at protected groups
+- Threats of violence or content encouraging serious physical harm
+- Sexual exploitation, sexual abuse, or coercive sexual content
+- Content involving the sexual exploitation of minors
+- Spam, scams, phishing, impersonation, or fraud
+- Illegal activity or content that violates the rights of others
+- Evasion of moderation, enforcement, or safety systems
 
 This list is illustrative and not exhaustive. We may restrict or remove content and take action against accounts that we determine violate these Terms, our Community Guidelines, applicable law, or the safety of ManaCamp and its users.`,
   },
@@ -76,11 +77,11 @@ This list is illustrative and not exhaustive. We may restrict or remove content 
 Users may be able to report content, users, rooms, channels, or other activity for review. Users may also be able to block other users and use additional safety features provided by the service.
 
 We reserve the right, in our sole discretion, to:
-• Review reported or suspected violations
-• Remove, restrict, or disable access to content
-• Limit account features or participation
-• Suspend or terminate accounts
-• Preserve relevant records for safety, abuse prevention, legal compliance, or dispute resolution
+- Review reported or suspected violations
+- Remove, restrict, or disable access to content
+- Limit account features or participation
+- Suspend or terminate accounts
+- Preserve relevant records for safety, abuse prevention, legal compliance, or dispute resolution
 
 We are not obligated to publish detailed explanations of moderation decisions, but we may do so when appropriate.`,
   },
@@ -91,15 +92,15 @@ We are not obligated to publish detailed explanations of moderation decisions, b
 
 If there is a conflict between these Terms and the Community Guidelines, these Terms control to the extent of the conflict.
 
-Community Guidelines: https://manacamp.app/guidelines`,
+Community Guidelines: /guidelines`,
   },
   {
     id: "paid-services",
     title: "8. Billing and Paid Services",
     content: `ManaCamp may offer paid services, subscriptions, or premium features. If you purchase any paid feature:
-• Pricing, billing terms, and refund information will be disclosed at the time of purchase
-• You authorize us or our payment processor to charge your selected payment method
-• Recurring services may renew automatically if disclosed at purchase, unless cancelled before renewal
+- Pricing, billing terms, and refund information will be disclosed at the time of purchase
+- You authorize us or our payment processor to charge your selected payment method
+- Recurring services may renew automatically if disclosed at purchase, unless cancelled before renewal
 
 You are responsible for reviewing all purchase terms before completing a transaction.`,
   },
@@ -135,7 +136,7 @@ If you have questions about these Terms, please contact:
 
 legal@manacamp.app`,
   },
-];
+] as const;
 
 export default function TermsPage() {
   return (
@@ -152,12 +153,19 @@ export default function TermsPage() {
               Legal
             </div>
             <h1 className="text-3xl sm:text-6xl font-bold text-white mb-4 text-balance">
-              Terms &{" "}
-              <span className="gradient-text">Conditions</span>
+              Terms & <span className="gradient-text">Conditions</span>
             </h1>
             <p className="text-text-secondary text-sm">
               Last updated: {legalLastUpdated}
             </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="section-divider pb-6 sm:pb-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <ScrollReveal>
+            <LegalNav current="terms" />
           </ScrollReveal>
         </div>
       </section>

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import ScrollReveal from "@/components/ScrollReveal";
+import Link from "next/link";
 import { Shield } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
+import LegalNav from "@/components/LegalNav";
 import { legalLastUpdated, privacySections } from "@/app/legalContent";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy – ManaCamp",
+  title: "Privacy Policy - ManaCamp",
   description:
     "Read ManaCamp's Privacy Policy and learn how we collect, use, and protect your data.",
 };
@@ -36,6 +38,14 @@ export default function PrivacyPage() {
       <section className="section-divider pb-6 sm:pb-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
+            <LegalNav current="privacy" />
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <section className="section-divider pb-6 sm:pb-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <ScrollReveal>
             <div className="panel rounded-2xl p-5 sm:p-6">
               <h2 className="text-sm font-semibold text-text-secondary uppercase tracking-[0.28em] mb-4">
                 Table of Contents
@@ -56,7 +66,7 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <section className="section-divider pb-20 sm:pb-24">
+      <section className="section-divider pb-14 sm:pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-6">
           {privacySections.map((section, index) => (
             <ScrollReveal key={section.id} delay={index * 0.05}>
@@ -73,6 +83,47 @@ export default function PrivacyPage() {
               </div>
             </ScrollReveal>
           ))}
+        </div>
+      </section>
+
+      <section className="section-divider pb-20 sm:pb-24">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-4">
+          <ScrollReveal>
+            <div className="panel rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                  Terms & Conditions
+                </h2>
+                <p className="text-sm text-text-secondary leading-relaxed max-w-2xl">
+                  Review the legal terms that govern account usage, platform access, and enforcement.
+                </p>
+              </div>
+              <Link
+                href="/terms"
+                className="btn-secondary rounded-full px-5 py-3 text-sm font-medium text-center transition-all duration-200"
+              >
+                View Terms & Conditions
+              </Link>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal>
+            <div className="panel rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                  Community Guidelines
+                </h2>
+                <p className="text-sm text-text-secondary leading-relaxed max-w-2xl">
+                  See expected conduct standards and prohibited behavior across public and private spaces.
+                </p>
+              </div>
+              <Link
+                href="/guidelines"
+                className="btn-secondary rounded-full px-5 py-3 text-sm font-medium text-center transition-all duration-200"
+              >
+                View Community Guidelines
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </div>
