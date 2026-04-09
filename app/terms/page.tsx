@@ -14,84 +14,124 @@ const sections = [
   {
     id: "acceptance",
     title: "1. Acceptance of Terms",
-    content: `By downloading, installing, or using ManaCamp ("the App"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use the App.
+    content: `By downloading, installing, accessing, or using ManaCamp ("ManaCamp," "we," "us," or "our"), you agree to be bound by these Terms & Conditions ("Terms"). If you do not agree to these Terms, do not use ManaCamp.
 
-These Terms apply to all users of the App, including visitors and registered users. We reserve the right to update these Terms at any time. Your continued use of the App after changes constitutes acceptance of the new Terms.`,
+These Terms apply to all users of the service, including visitors, registered users, community participants, hosts, moderators, and purchasers of any paid features. We may update these Terms from time to time. If we make material changes, we may provide notice through the service or by other reasonable means. Your continued use of ManaCamp after updated Terms become effective constitutes acceptance of the revised Terms.`,
   },
   {
-    id: "use",
-    title: "2. Use of the App",
-    content: `ManaCamp grants you a limited, non-exclusive, non-transferable, revocable license to use the App for your lawful use of the service.
+    id: "eligibility",
+    title: "2. Eligibility and Account Registration",
+    content: `You may need to create an account to access certain features of ManaCamp. When creating and maintaining an account, you agree to:
+• Provide accurate and complete information
+• Keep your credentials secure and confidential
+• Be responsible for activity that occurs under your account
+• Notify us promptly of any unauthorized access or security incident
+
+You may not create an account using false information, impersonate another person or entity, or create accounts to evade enforcement actions. We may suspend, restrict, or terminate accounts that violate these Terms or create risk for ManaCamp or its users.`,
+  },
+  {
+    id: "license",
+    title: "3. Limited License and Acceptable Use",
+    content: `Subject to your compliance with these Terms, ManaCamp grants you a limited, non-exclusive, non-transferable, revocable license to access and use the service for its intended lawful purposes.
 
 You agree not to:
-• Reverse engineer, decompile, or disassemble the App
-• Use the App for any unlawful purpose
-• Attempt to gain unauthorized access to any part of the App
-• Interfere with or disrupt the App's servers or networks
-  • Use abusive automation, scraping, or unauthorized clients to interact with the App
-• Resell or redistribute the App without express written permission`,
+• Reverse engineer, decompile, or disassemble the service
+• Use ManaCamp for unlawful, fraudulent, or harmful purposes
+• Attempt to gain unauthorized access to accounts, systems, or data
+• Interfere with the operation, integrity, or security of the service
+• Use scraping, abusive automation, bots, or unauthorized clients except where expressly permitted
+• Resell, redistribute, sublicense, or commercially exploit ManaCamp without written permission`,
   },
   {
-    id: "accounts",
-    title: "3. User Accounts",
-    content: `To access certain features, you must create an account. You are responsible for:
-• Maintaining the confidentiality of your account credentials
-• All activities that occur under your account
-• Notifying us immediately of any unauthorized use
+    id: "user-content",
+    title: "4. User Content and Responsibility",
+    content: `ManaCamp may allow you to create, submit, post, transmit, display, or store content, including messages, profile details, usernames, display names, room names, channel names, group information, media, and other materials ("User Content").
 
-You may not create accounts using false identities or impersonate any person or entity. We reserve the right to terminate accounts at our discretion.`,
+You retain ownership of your User Content, but you grant ManaCamp a limited, worldwide, non-exclusive license to host, store, process, reproduce, and display that content solely as necessary to operate, improve, secure, and provide the service.
+
+You are solely responsible for the User Content you create or share. You represent that your User Content does not violate the rights of others, applicable law, or these Terms.`,
   },
   {
-    id: "content",
-    title: "4. User Content",
-    content: `You retain ownership of any content you create within the App, such as messages, uploads, profile details, and community content. By using the App, you grant ManaCamp a limited, worldwide license to store and process your content solely to provide the service.
+    id: "conduct",
+    title: "5. Prohibited Conduct and Objectionable Content",
+    content: `ManaCamp has no tolerance for objectionable content or abusive users.
 
-You are responsible for ensuring your content does not violate any third-party rights, including intellectual property rights. ManaCamp is not responsible for content accuracy or any losses arising from your content.`,
+You may not use ManaCamp to create, share, promote, or organize content or conduct involving:
+• Harassment, bullying, or severe targeted abuse
+• Hate speech, slurs, or dehumanizing content directed at protected groups
+• Threats of violence or content encouraging serious physical harm
+• Sexual exploitation, sexual abuse, or coercive sexual content
+• Content involving the sexual exploitation of minors
+• Spam, scams, phishing, impersonation, or fraud
+• Illegal activity or content that violates the rights of others
+• Evasion of moderation, enforcement, or safety systems
+
+This list is illustrative and not exhaustive. We may restrict or remove content and take action against accounts that we determine violate these Terms, our Community Guidelines, applicable law, or the safety of ManaCamp and its users.`,
   },
   {
-    id: "subscriptions",
-    title: "5. Billing and Paid Services",
-    content: `ManaCamp may offer paid services or premium features. If you purchase a paid service:
-• Pricing, billing terms, and refund details will be disclosed at the time of purchase
-• You authorize us or our payment processor to charge the payment method you provide
-• Ongoing services may renew automatically unless cancelled before renewal, if disclosed at purchase
+    id: "moderation",
+    title: "6. Moderation, Reporting, Blocking, and Enforcement",
+    content: `ManaCamp may use automated systems, human review, or both to detect, prevent, review, or address objectionable content and abusive conduct.
 
-You are responsible for reviewing the applicable purchase terms before completing any transaction.`,
+Users may be able to report content, users, rooms, channels, or other activity for review. Users may also be able to block other users and use additional safety features provided by the service.
+
+We reserve the right, in our sole discretion, to:
+• Review reported or suspected violations
+• Remove, restrict, or disable access to content
+• Limit account features or participation
+• Suspend or terminate accounts
+• Preserve relevant records for safety, abuse prevention, legal compliance, or dispute resolution
+
+We are not obligated to publish detailed explanations of moderation decisions, but we may do so when appropriate.`,
   },
   {
-    id: "disclaimer",
-    title: "6. Disclaimer of Warranties",
-    content: `THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND. MANACAMP DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+    id: "guidelines",
+    title: "7. Community Guidelines",
+    content: `Your use of ManaCamp is also subject to our Community Guidelines, which describe expected conduct and prohibited behavior in more practical terms. The Community Guidelines are incorporated into these Terms by reference.
 
-  ManaCamp does not warrant that the App will be uninterrupted, error-free, or free of viruses or other harmful components.`,
+If there is a conflict between these Terms and the Community Guidelines, these Terms control to the extent of the conflict.`,
   },
   {
-    id: "limitation",
-    title: "7. Limitation of Liability",
-    content: `TO THE MAXIMUM EXTENT PERMITTED BY LAW, MANACAMP SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF DATA, LOSS OF PROFITS, OR BUSINESS INTERRUPTION.
+    id: "paid-services",
+    title: "8. Billing and Paid Services",
+    content: `ManaCamp may offer paid services, subscriptions, or premium features. If you purchase any paid feature:
+• Pricing, billing terms, and refund information will be disclosed at the time of purchase
+• You authorize us or our payment processor to charge your selected payment method
+• Recurring services may renew automatically if disclosed at purchase, unless cancelled before renewal
 
-Our total liability to you for any claims arising from your use of the App shall not exceed the amount you paid to ManaCamp in the twelve months preceding the claim.`,
+You are responsible for reviewing all purchase terms before completing a transaction.`,
   },
   {
     id: "termination",
-    title: "8. Termination",
-    content: `We may terminate or suspend your access to the App at our sole discretion, without notice, for conduct that we believe violates these Terms or is harmful to other users, ManaCamp, third parties, or the public.
+    title: "9. Suspension and Termination",
+    content: `We may suspend, restrict, or terminate your access to ManaCamp, with or without notice, if we believe you have violated these Terms, created risk for other users, interfered with the service, or exposed ManaCamp to legal, security, or reputational harm.
 
-Upon termination, your license to use the App will immediately cease. Sections relating to intellectual property, disclaimer of warranties, limitation of liability, and governing law survive termination.`,
+Upon termination, your right to use ManaCamp ends immediately. Sections that by their nature should survive termination, including provisions relating to user content licenses, moderation, disclaimers, limitations of liability, governing law, and dispute-related provisions, will survive.`,
   },
   {
-    id: "governing",
-    title: "9. Governing Law",
-    content: `These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law provisions.
+    id: "disclaimer",
+    title: "10. Disclaimer of Warranties",
+    content: `MANACAMP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND QUIET ENJOYMENT.
 
-Any disputes arising from these Terms or your use of the App shall be subject to the exclusive jurisdiction of the courts located in Delaware, United States.`,
+We do not guarantee that ManaCamp will be uninterrupted, error-free, secure, or free of harmful components, or that content available through the service will be accurate, complete, or reliable.`,
   },
   {
-    id: "contact",
-    title: "10. Contact",
-    content: `If you have questions about these Terms, please contact us:
+    id: "liability",
+    title: "11. Limitation of Liability",
+    content: `TO THE MAXIMUM EXTENT PERMITTED BY LAW, MANACAMP AND ITS AFFILIATES, OFFICERS, EMPLOYEES, CONTRACTORS, AND PARTNERS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF DATA, PROFITS, REVENUE, GOODWILL, OR BUSINESS INTERRUPTION, ARISING OUT OF OR RELATED TO YOUR USE OF THE SERVICE.
 
-Email: legal@manacamp.app`,
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, OUR TOTAL LIABILITY FOR CLAIMS ARISING OUT OF OR RELATING TO MANACAMP WILL NOT EXCEED THE GREATER OF: (A) THE AMOUNT YOU PAID TO MANACAMP IN THE TWELVE MONTHS BEFORE THE CLAIM AROSE, OR (B) USD $50.`,
+  },
+  {
+    id: "governing-law",
+    title: "12. Governing Law and Contact",
+    content: `These Terms are governed by the laws of the State of Delaware, United States, without regard to its conflict of laws principles.
+
+Any disputes arising out of or relating to these Terms or your use of ManaCamp will be subject to the exclusive jurisdiction of the state or federal courts located in Delaware, unless applicable law requires otherwise.
+
+If you have questions about these Terms, please contact:
+
+legal@manacamp.app`,
   },
 ];
 
