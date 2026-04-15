@@ -52,7 +52,7 @@ export default function DownloadSection() {
                   </div>
 
                   <span className="eyebrow-pill text-xs mb-3 border-[rgba(90,178,255,0.22)] text-[rgb(182,224,255)]">
-                    Preview Available Now
+                    Available Now
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 text-balance">
                     ManaCamp for Windows

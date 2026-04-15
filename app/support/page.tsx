@@ -16,11 +16,11 @@ const faqs = [
       },
       {
         q: "Is ManaCamp free to use?",
-        a: "ManaCamp is free to download on Windows. If pricing or paid plans change later, they&apos;ll be shown clearly in the app and on the site.",
+        a: "ManaCamp has a free core experience. Premium plans include advanced features like Bots, Groups, and 1080p screen share, with additional premium tools over time.",
       },
       {
-        q: "When will the iOS app be available?",
-        a: "We're actively developing the ManaCamp iOS app. Sign up for early access notifications on our homepage to be the first to know when it launches on the App Store.",
+        q: "Is ManaCamp available on iOS?",
+        a: "Yes. ManaCamp is available on the App Store for iPhone and iPad: https://apps.apple.com/us/app/manacamp/id6761014896",
       },
     ],
   },
@@ -37,7 +37,7 @@ const faqs = [
       },
       {
         q: "Can I use ManaCamp on multiple devices?",
-        a: "Yes! Your account syncs across all your devices. Once the iOS app launches, you'll be able to seamlessly switch between Windows and iOS.",
+        a: "Yes. Your account syncs across your devices so you can seamlessly switch between Windows and iOS.",
       },
     ],
   },
@@ -50,7 +50,7 @@ const faqs = [
       },
       {
         q: "Can I use bots in my space?",
-        a: "ManaCamp is built to support bots and interactive tools that help communities coordinate, automate tasks, and add more activity to their spaces.",
+        a: "Yes. Bots are available as a Premium feature, alongside other advanced tools like Groups and 1080p screen share.",
       },
       {
         q: "How do I know who&apos;s online or active?",
@@ -166,10 +166,10 @@ export default function SupportPage() {
               },
               {
                 icon: Bell,
-                title: "iOS Updates",
-                desc: "Join the waitlist for launch news",
-                action: "Join Waitlist",
-                href: "/#ios",
+                title: "iOS App",
+                desc: "Download ManaCamp for iPhone and iPad",
+                action: "Open App Store",
+                href: "https://apps.apple.com/us/app/manacamp/id6761014896",
                 iconClass: "text-accent-warm-soft",
                 tileClass: "border-[rgba(255,138,61,0.24)] bg-[rgba(255,138,61,0.08)]",
               },
@@ -189,6 +189,8 @@ export default function SupportPage() {
                     <p className="text-xs text-text-secondary mb-4">{item.desc}</p>
                     <a
                       href={item.href}
+                      target={item.href.startsWith("http") ? "_blank" : undefined}
+                      rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="btn-secondary inline-block px-4 py-2 rounded-full text-white text-xs font-medium transition-colors"
                     >
                       {item.action}
@@ -276,7 +278,7 @@ export default function SupportPage() {
                     <option>Account issue</option>
                     <option>Chat or sync issue</option>
                     <option>Windows install</option>
-                    <option>iOS waitlist</option>
+                    <option>iOS app support</option>
                     <option>Bug report</option>
                     <option>Feature request</option>
                     <option>Other</option>

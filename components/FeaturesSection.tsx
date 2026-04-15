@@ -39,23 +39,23 @@ const features = [
     icon: MonitorUp,
     title: "Screen Sharing",
     description:
-      "Share your screen for walkthroughs, help, watch-together moments, or live collaboration without leaving the app.",
+      "Share your screen for walkthroughs, help, watch-together moments, or live collaboration. 1080p screen share is available with Premium.",
     accent: "text-accent-primary",
     tile: "border-[rgba(90,178,255,0.2)] bg-[rgba(77,163,255,0.08)]",
   },
   {
     icon: Users,
-    title: "Friends & Presence",
+    title: "Groups (Premium)",
     description:
-      "See who&apos;s around, who&apos;s active, and who&apos;s in session. Presence makes your community feel alive and ready to join.",
+      "Create and manage Groups for dedicated spaces, permissions, and community structure. Included with Premium plans.",
     accent: "text-[rgb(185,164,255)]",
     tile: "border-[rgba(123,97,255,0.22)] bg-[rgba(123,97,255,0.08)]",
   },
   {
     icon: Bot,
-    title: "Bots & Activity",
+    title: "Bots (Premium)",
     description:
-      "Extend your server with bots, automations, music, utility features, and interactive tools that make your space more powerful.",
+      "Extend your server with bots, automations, music, utility features, and interactive tools through Premium.",
     accent: "text-accent-warm-soft",
     tile: "border-[rgba(255,159,67,0.22)] bg-[rgba(255,159,67,0.08)]",
   },
@@ -80,7 +80,7 @@ export default function FeaturesSection() {
           </h2>
           <p className="text-base sm:text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed text-balance">
             ManaCamp gives communities the tools to chat, coordinate, hang out,
-            and stay connected across channels, DMs, voice, video, and bots.
+            and stay connected across channels, DMs, and live sessions, with premium upgrades for Bots, Groups, and 1080p screen share.
           </p>
         </ScrollReveal>
 

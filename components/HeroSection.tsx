@@ -7,6 +7,8 @@ import BrandMark from "@/components/BrandMark";
 import BrandWordmark from "@/components/BrandWordmark";
 
 export default function HeroSection() {
+  const iosAppStoreUrl = "https://apps.apple.com/us/app/manacamp/id6761014896";
+
   return (
     <section className="relative flex items-center justify-center overflow-hidden min-h-[42rem] sm:min-h-[46rem] lg:min-h-[clamp(46rem,88svh,54rem)]">
       <div className="absolute inset-0 -z-10">
@@ -46,7 +48,7 @@ export default function HeroSection() {
           className="mb-6 sm:mb-8 flex justify-center lg:justify-start"
         >
           <div className="panel rounded-full px-4 py-2 text-xs sm:text-sm text-text-secondary border-[rgba(255,138,61,0.18)]">
-            Under construction. Early preview in active development.
+            Available now on Windows and iOS.
           </div>
         </motion.div>
 
@@ -59,7 +61,7 @@ export default function HeroSection() {
               className="eyebrow-pill mb-6 sm:mb-8 mx-auto lg:mx-0 text-center lg:text-left whitespace-nowrap"
             >
               <BrandMark className="w-3.5 h-3.5 text-accent-primary" />
-              <span className="text-sm">Windows available now · iOS coming soon</span>
+              <span className="text-sm">Windows + iOS available now</span>
             </motion.div>
 
             <motion.h1
@@ -89,7 +91,7 @@ export default function HeroSection() {
               transition={{ duration: 0.7, delay: 0.24 }}
               className="text-sm text-text-muted max-w-xl mx-auto lg:mx-0 -mt-2 mb-8 sm:mb-10"
             >
-              Early product and site preview. Features, polish, and platform support are still actively being refined.
+              Premium features include Bots, Groups, and 1080p screen share, with more on the way.
             </motion.p>
 
             <motion.div
@@ -104,12 +106,14 @@ export default function HeroSection() {
               >
                 Download for Windows
               </Link>
-              <Link
-                href="#ios"
+              <a
+                href={iosAppStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-secondary w-full sm:w-auto px-7 sm:px-8 py-3.5 sm:py-4 rounded-full font-semibold text-base transition-all duration-200 hover:-translate-y-0.5"
               >
-                Join iOS Waitlist
-              </Link>
+                Download on App Store
+              </a>
             </motion.div>
 
             <motion.div

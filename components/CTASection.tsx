@@ -21,8 +21,8 @@ export default function CTASection() {
               </h2>
               <p className="text-base sm:text-lg text-text-secondary max-w-xl mx-auto mb-8 sm:mb-10 leading-relaxed text-balance">
                 Download ManaCamp for Windows and start building a space for
-                channels, DMs, sessions, bots, and everything your group needs
-                to stay connected.
+                channels, DMs, and sessions, with Premium options for Bots,
+                Groups, and 1080p screen share.
               </p>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
                 <Link

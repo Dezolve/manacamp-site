@@ -2,10 +2,12 @@
 
 import ScrollReveal from "./ScrollReveal";
 import { motion } from "framer-motion";
-import { Apple, Bell, Star, Smartphone } from "lucide-react";
+import { Apple, ExternalLink, Star, Smartphone } from "lucide-react";
 import BrandWordmark from "./BrandWordmark";
 
 export default function IOSSection() {
+  const iosAppStoreUrl = "https://apps.apple.com/us/app/manacamp/id6761014896";
+
   return (
     <section id="ios" className="section-divider py-20 sm:py-24 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
@@ -29,14 +31,13 @@ export default function IOSSection() {
               <span className="gradient-text">iPhone & iPad</span>
               <br />
               <span className="text-text-secondary text-2xl sm:text-3xl font-normal">
-                Coming Soon
+                Available Now
               </span>
             </h2>
             <p className="text-base sm:text-lg text-text-secondary leading-relaxed mb-8 text-balance">
-              We&apos;re bringing ManaCamp to iPhone and iPad so your community
-              stays with you everywhere. Keep up with channels and DMs, check
-              activity, manage notifications, and stay connected when you&apos;re
-              away from your desktop.
+              ManaCamp is now on iPhone and iPad so your community stays with
+              you everywhere. Keep up with channels and DMs, check activity,
+              manage notifications, and stay connected away from desktop.
             </p>
 
             <ul className="space-y-3 mb-8">
@@ -44,7 +45,7 @@ export default function IOSSection() {
                 "Stay connected to channels and DMs on the go",
                 "Check activity, replies, and notifications in real time",
                 "Follow conversations and community activity from anywhere",
-                "Built for a fast, clean, native-feeling experience",
+                "Download now from the App Store",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-text-secondary min-w-0">
                   <div className="icon-tile w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 border-[rgba(90,178,255,0.22)] bg-[rgba(90,178,255,0.08)]">
@@ -56,18 +57,25 @@ export default function IOSSection() {
             </ul>
 
             <p className="text-sm text-text-secondary mb-3">
-              Get notified when the iOS app is ready.
+              Available on the App Store for iPhone and iPad.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="input-field flex-1 min-w-0 px-4 py-3 rounded-full transition-colors text-sm"
-              />
-              <button className="btn-primary px-6 py-3 rounded-full font-medium text-sm transition-all duration-200 flex items-center justify-center gap-2 whitespace-nowrap">
-                <Bell className="w-4 h-4" />
-                Notify Me
-              </button>
+              <a
+                href={iosAppStoreUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary px-6 py-3 rounded-full font-medium text-sm transition-all duration-200 flex items-center justify-center gap-2 whitespace-nowrap"
+              >
+                <Apple className="w-4 h-4" />
+                Download on the App Store
+              </a>
+              <a
+                href="/support"
+                className="btn-secondary px-6 py-3 rounded-full font-medium text-sm transition-all duration-200 flex items-center justify-center gap-2 whitespace-nowrap"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Need help?
+              </a>
             </div>
           </ScrollReveal>
 
@@ -138,7 +146,7 @@ export default function IOSSection() {
               >
                 <div className="flex items-center gap-2">
                   <Smartphone className="w-4 h-4 text-accent-warm-soft" />
-                  <span className="text-xs font-semibold text-[rgb(255,198,158)]">Coming Soon</span>
+                  <span className="text-xs font-semibold text-[rgb(255,198,158)]">Available Now</span>
                 </div>
               </motion.div>
             </div>
