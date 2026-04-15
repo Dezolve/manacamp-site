@@ -8,10 +8,9 @@ import BrandWordmark from "@/components/BrandWordmark";
 
 const navLinks = [
   { href: "/#features", label: "Features" },
+  { href: "/blog", label: "Blog" },
   { href: "/download", label: "Download" },
-  { href: "/privacy", label: "Privacy" },
-  { href: "/terms", label: "Terms" },
-  { href: "/guidelines", label: "Guidelines" },
+  { href: "/privacy", label: "Legal" },
   { href: "/support", label: "Support" },
 ];
 
