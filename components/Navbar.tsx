@@ -74,8 +74,9 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-border-subtle bg-[rgba(8,13,25,0.55)] text-text-secondary hover:text-white transition-colors"
-            aria-label="Toggle menu"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
+            aria-controls="mobile-nav-menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -84,7 +85,20 @@ export default function Navbar() {
 
       {isOpen && (
         <div className="md:hidden px-4 pb-4">
-          <div className="panel rounded-2xl border-border-subtle p-4 flex flex-col gap-2">
+          <div
+            id="mobile-nav-menu"
+            className="panel rounded-2xl border-border-subtle p-4 flex flex-col gap-2"
+          >
+            <div className="flex items-center justify-end">
+              <button
+                type="button"
+                onClick={() => setIsOpen(false)}
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border-subtle bg-[rgba(255,255,255,0.03)] text-text-secondary transition-colors hover:text-white"
+                aria-label="Close menu"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
