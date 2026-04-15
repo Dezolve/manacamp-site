@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import BrandMark from "@/components/BrandMark";
@@ -18,6 +18,8 @@ const navLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  const toggleButtonRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -35,6 +37,28 @@ export default function Navbar() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    if (!isOpen) {
+      return;
+    }
+
+    const handlePointerDown = (event: PointerEvent) => {
+      const target = event.target;
+      if (!(target instanceof Node)) {
+        return;
+      }
+
+      if (menuRef.current?.contains(target) || toggleButtonRef.current?.contains(target)) {
+        return;
+      }
+
+      setIsOpen(false);
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    return () => document.removeEventListener("pointerdown", handlePointerDown);
+  }, [isOpen]);
 
   return (
     <nav
@@ -72,6 +96,7 @@ export default function Navbar() {
           </div>
 
           <button
+            ref={toggleButtonRef}
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-border-subtle bg-[rgba(8,13,25,0.55)] text-text-secondary hover:text-white transition-colors"
             aria-label={isOpen ? "Close menu" : "Open menu"}
@@ -87,18 +112,9 @@ export default function Navbar() {
         <div className="md:hidden px-4 pb-4">
           <div
             id="mobile-nav-menu"
+            ref={menuRef}
             className="panel rounded-2xl border-border-subtle p-4 flex flex-col gap-2"
           >
-            <div className="flex items-center justify-end">
-              <button
-                type="button"
-                onClick={() => setIsOpen(false)}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border-subtle bg-[rgba(255,255,255,0.03)] text-text-secondary transition-colors hover:text-white"
-                aria-label="Close menu"
-              >
-                <X className="h-5 w-5" />
-              </button>
-            </div>
             {navLinks.map((link) => (
               <Link
                 key={link.href}
