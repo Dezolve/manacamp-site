@@ -101,39 +101,43 @@ export default function AboutPage() {
             <div className="absolute left-[8%] bottom-0 h-52 w-52 rounded-full bg-accent-support/10 blur-3xl" />
           </div>
 
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
             <ScrollReveal>
-              <div className="eyebrow-pill text-sm mb-6 mx-auto">
+              <div className="eyebrow-pill text-sm mb-7 sm:mb-8 mx-auto">
                 About ManaCamp
               </div>
-              <h1 className="mx-auto max-w-[13ch] text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-white text-balance">
-                Bringing presence back to{" "}
-                <span className="gradient-text">online community.</span>
+              <h1 className="mx-auto text-4xl leading-[0.98] sm:text-6xl lg:text-7xl xl:text-[5.4rem] font-semibold tracking-tight text-white text-balance">
+                <span className="block lg:whitespace-nowrap">
+                  Bringing presence back
+                </span>
+                <span className="block lg:whitespace-nowrap">
+                  to online <span className="gradient-text">community.</span>
+                </span>
               </h1>
-              <p className="mt-6 text-base sm:text-lg lg:text-xl text-[rgb(183,197,229)] leading-relaxed text-balance max-w-4xl mx-auto">
+              <p className="mt-7 sm:mt-8 text-[1.05rem] sm:text-xl lg:text-[1.38rem] text-[rgb(190,204,235)] leading-[1.65] text-balance max-w-5xl mx-auto">
                 ManaCamp is a modern platform built for gaming communities first,
                 inspired by the era when Blizzard&apos;s Battle.net 1.0
                 connected Diablo II, StarCraft, and Warcraft in one shared
                 social space, and being online felt like being part of
                 something bigger than chat.
               </p>
-              <p className="mt-5 text-sm sm:text-base text-[rgb(141,158,194)] leading-relaxed text-balance max-w-3xl mx-auto">
+              <p className="mt-6 text-sm sm:text-[1.03rem] text-[rgb(154,171,206)] leading-[1.72] text-balance max-w-4xl mx-auto">
                 Created by Chad Wessendorf, solo developer and founder of
                 DezolveLabs, ManaCamp is built to make online spaces feel more
                 alive, more social, and more meaningful while giving
                 developers, creators, moderators, and power users the depth to
                 build stronger communities.
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-3.5">
+              <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-3.5">
                 <Link
                   href="/download"
-                  className="btn-primary rounded-full px-7 py-3.5 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5"
+                  className="btn-primary rounded-full px-7 sm:px-8 py-3.5 sm:py-4 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5"
                 >
                   Explore ManaCamp
                 </Link>
                 <Link
                   href="#why-manacamp"
-                  className="btn-secondary rounded-full px-7 py-3.5 text-base font-semibold border-[rgba(122,176,255,0.14)] bg-[rgba(8,13,27,0.76)] transition-all duration-200 hover:-translate-y-0.5"
+                  className="btn-secondary rounded-full px-7 sm:px-8 py-3.5 sm:py-4 text-base font-semibold border-[rgba(122,176,255,0.14)] bg-[rgba(8,13,27,0.76)] transition-all duration-200 hover:-translate-y-0.5"
                 >
                   Why ManaCamp
                 </Link>

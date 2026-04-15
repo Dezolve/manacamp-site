@@ -9,10 +9,10 @@ import BrandWordmark from "@/components/BrandWordmark";
 const navLinks = [
   { href: "/#features", label: "Features" },
   { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
   { href: "/download", label: "Download" },
-  { href: "/privacy", label: "Legal" },
+  { href: "/blog", label: "Blog" },
   { href: "/support", label: "Support" },
+  { href: "/privacy", label: "Legal" },
 ];
 
 export default function Navbar() {
