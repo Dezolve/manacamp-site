@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
-import BrandMark from "@/components/BrandMark";
 import BrandWordmark from "@/components/BrandWordmark";
 
 export default function HeroSection() {
@@ -40,12 +39,12 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(4,8,18,0.3))]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-8 sm:pb-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-8 sm:pb-10">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55 }}
-          className="mb-6 sm:mb-8 flex justify-center lg:justify-start"
+          className="mb-4 sm:mb-5 flex justify-center lg:justify-start"
         >
           <div className="panel rounded-full px-4 py-2 text-xs sm:text-sm text-text-secondary border-[rgba(255,138,61,0.18)]">
             Available now on Windows and iOS.
@@ -54,16 +53,6 @@ export default function HeroSection() {
 
         <div className="grid grid-cols-1 gap-10 sm:gap-12 lg:gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,540px)] lg:items-center">
           <div className="text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="eyebrow-pill mb-6 sm:mb-8 mx-auto lg:mx-0 text-center lg:text-left whitespace-nowrap"
-            >
-              <BrandMark className="w-3.5 h-3.5 text-accent-primary" />
-              <span className="text-sm">Windows + iOS available now</span>
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}

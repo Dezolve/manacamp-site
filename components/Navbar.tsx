@@ -50,7 +50,7 @@ export default function Navbar() {
             <div className="icon-tile w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 group-hover:border-[rgba(255,158,88,0.34)] group-hover:shadow-[0_0_24px_rgba(90,178,255,0.18)]">
               <BrandMark className="w-4 h-4 text-accent-primary" />
             </div>
-            <BrandWordmark className="text-xl font-semibold tracking-[0.02em]" />
+            <BrandWordmark className="text-xl font-semibold" />
           </Link>
 
           <div className="hidden md:flex items-center gap-5 lg:gap-6">

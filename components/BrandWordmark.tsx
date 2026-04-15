@@ -5,18 +5,24 @@ type BrandWordmarkProps = {
   glow?: boolean;
 };
 
-const baseManaWordStyle: CSSProperties = {
+const baseWordmarkStyle: CSSProperties = {
+  fontFamily:
+    '"SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif',
+  letterSpacing: "-0.01em",
+};
+
+const manaStyle: CSSProperties = {
   display: "inline-block",
-  backgroundImage: "linear-gradient(135deg, #a7e6ff 0%, #79c7ff 42%, #4e98ff 100%)",
+  backgroundImage: "linear-gradient(90deg, #63c2ff 0%, #4d86e8 62%, #8a7fc6 90%, #b78395 100%)",
   WebkitBackgroundClip: "text",
   backgroundClip: "text",
   WebkitTextFillColor: "transparent",
   color: "transparent",
 };
 
-const baseCampWordStyle: CSSProperties = {
+const campStyle: CSSProperties = {
   display: "inline-block",
-  backgroundImage: "linear-gradient(135deg, #ffd08d 0%, #ffad4f 44%, #ff7a1a 100%)",
+  backgroundImage: "linear-gradient(90deg, #7a8ed8 0%, #c68583 24%, #ff9560 60%, #ff7a4a 100%)",
   WebkitBackgroundClip: "text",
   backgroundClip: "text",
   WebkitTextFillColor: "transparent",
@@ -24,18 +30,18 @@ const baseCampWordStyle: CSSProperties = {
 };
 
 export default function BrandWordmark({ className = "", glow = true }: BrandWordmarkProps) {
-  const manaWordStyle: CSSProperties = glow
-    ? { ...baseManaWordStyle, textShadow: "0 0 22px rgba(90, 178, 255, 0.18)" }
-    : baseManaWordStyle;
-
-  const campWordStyle: CSSProperties = glow
-    ? { ...baseCampWordStyle, textShadow: "0 0 22px rgba(255, 138, 61, 0.14)" }
-    : baseCampWordStyle;
+  const finalWordmarkStyle: CSSProperties = glow
+    ? {
+        ...baseWordmarkStyle,
+        textShadow:
+          "0 0 18px rgba(99, 194, 255, 0.14), 0 0 20px rgba(255, 122, 74, 0.1)",
+      }
+    : baseWordmarkStyle;
 
   return (
-    <span className={className}>
-      <span style={manaWordStyle}>Mana</span>
-      <span style={campWordStyle}>Camp</span>
+    <span className={className} style={finalWordmarkStyle}>
+      <span style={manaStyle}>Mana</span>
+      <span style={campStyle}>Camp</span>
     </span>
   );
 }
