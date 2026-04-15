@@ -4,12 +4,15 @@ import { BookOpen } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import LegalNav from "@/components/LegalNav";
 import { legalLastUpdated, guidelineSections } from "@/app/legalContent";
+import { createMetadata, seo } from "@/app/seo";
 
-export const metadata: Metadata = {
-  title: "Community Guidelines - ManaCamp",
+export const metadata: Metadata = createMetadata({
+  title: "Community Guidelines",
   description:
-    "Read ManaCamp's Community Guidelines and learn what behavior is expected on the platform.",
-};
+    "Read ManaCamp's Community Guidelines to understand expected behavior, prohibited conduct, and platform safety standards.",
+  path: "/guidelines",
+  keywords: [...seo.defaultKeywords, "community guidelines", "content policy", "safety rules"],
+});
 
 export default function GuidelinesPage() {
   return (

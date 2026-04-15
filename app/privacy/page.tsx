@@ -4,12 +4,15 @@ import { Shield } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import LegalNav from "@/components/LegalNav";
 import { legalLastUpdated, privacySections } from "@/app/legalContent";
+import { createMetadata, seo } from "@/app/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy - ManaCamp",
+export const metadata: Metadata = createMetadata({
+  title: "Privacy Policy",
   description:
-    "Read ManaCamp's Privacy Policy and learn how we collect, use, and protect your data.",
-};
+    "Read ManaCamp's Privacy Policy to learn how we collect, use, protect, and manage your information across ManaCamp services.",
+  path: "/privacy",
+  keywords: [...seo.defaultKeywords, "privacy policy", "data protection", "user privacy"],
+});
 
 export default function PrivacyPage() {
   return (

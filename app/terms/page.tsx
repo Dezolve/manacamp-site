@@ -4,12 +4,15 @@ import { FileText } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import LegalNav from "@/components/LegalNav";
 import { legalLastUpdated } from "@/app/legalContent";
+import { createMetadata, seo } from "@/app/seo";
 
-export const metadata: Metadata = {
-  title: "Terms & Conditions - ManaCamp",
+export const metadata: Metadata = createMetadata({
+  title: "Terms & Conditions",
   description:
-    "Read ManaCamp's Terms of Service and the rules governing use of the platform.",
-};
+    "Read ManaCamp's Terms & Conditions covering account use, platform rules, moderation, paid services, and legal terms.",
+  path: "/terms",
+  keywords: [...seo.defaultKeywords, "terms and conditions", "terms of service", "legal terms"],
+});
 
 const sections = [
   {
