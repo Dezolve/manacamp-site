@@ -20,10 +20,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: absoluteUrl("/"),
   },
-  icons: {
-    icon: [{ url: "/favicon.ico" }],
-    shortcut: [{ url: "/favicon.ico" }],
-  },
   appleWebApp: {
     capable: true,
     title: seo.siteName,
@@ -86,6 +82,10 @@ export default function RootLayout({
         "@id": absoluteUrl("/#organization"),
         name: seo.siteName,
         url: seo.siteUrl,
+        logo: {
+          "@type": "ImageObject",
+          url: absoluteUrl(seo.logoPath),
+        },
         email: seo.organization.email,
         sameAs: seo.organization.sameAs,
       },

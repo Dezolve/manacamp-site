@@ -48,7 +48,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 gap-4">
           <Link href="/" className="-ml-1.5 inline-flex items-center gap-2 rounded-full px-1.5 py-1.5 transition-colors duration-200 group hover:bg-white/[0.03]">
             <div className="icon-tile w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 group-hover:border-[rgba(255,158,88,0.34)] group-hover:shadow-[0_0_24px_rgba(90,178,255,0.18)]">
-              <BrandMark className="w-4 h-4 text-accent-primary" />
+              <BrandMark className="w-[1.35rem] h-[1.35rem]" />
             </div>
             <BrandWordmark className="text-xl font-semibold" />
           </Link>

@@ -19,6 +19,7 @@ const defaultKeywords = [
   "iOS app",
 ];
 const ogImagePath = "/opengraph-image";
+const logoPath = "/icon.png";
 
 export const seo = {
   siteName,
@@ -27,6 +28,7 @@ export const seo = {
   defaultKeywords,
   siteUrl,
   ogImagePath,
+  logoPath,
   xHandle: "@manacamp",
   iosAppId: "6761014896",
   organization: {
