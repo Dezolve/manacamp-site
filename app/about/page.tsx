@@ -106,25 +106,25 @@ export default function AboutPage() {
               <div className="eyebrow-pill text-sm mb-6 mx-auto">
                 About ManaCamp
               </div>
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-white text-balance">
+              <h1 className="mx-auto max-w-[13ch] text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-white text-balance">
                 Bringing presence back to{" "}
                 <span className="gradient-text">online community.</span>
               </h1>
-              <p className="mt-6 text-base sm:text-lg lg:text-xl text-text-secondary leading-relaxed text-balance max-w-4xl mx-auto">
+              <p className="mt-6 text-base sm:text-lg lg:text-xl text-[rgb(183,197,229)] leading-relaxed text-balance max-w-4xl mx-auto">
                 ManaCamp is a modern platform built for gaming communities first,
                 inspired by the era when Blizzard&apos;s Battle.net 1.0
                 connected Diablo II, StarCraft, and Warcraft in one shared
                 social space, and being online felt like being part of
                 something bigger than chat.
               </p>
-              <p className="mt-5 text-sm sm:text-base text-text-muted leading-relaxed text-balance max-w-3xl mx-auto">
+              <p className="mt-5 text-sm sm:text-base text-[rgb(141,158,194)] leading-relaxed text-balance max-w-3xl mx-auto">
                 Created by Chad Wessendorf, solo developer and founder of
                 DezolveLabs, ManaCamp is built to make online spaces feel more
                 alive, more social, and more meaningful while giving
                 developers, creators, moderators, and power users the depth to
                 build stronger communities.
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+              <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-3.5">
                 <Link
                   href="/download"
                   className="btn-primary rounded-full px-7 py-3.5 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5"
@@ -132,10 +132,10 @@ export default function AboutPage() {
                   Explore ManaCamp
                 </Link>
                 <Link
-                  href="/blog"
-                  className="btn-secondary rounded-full px-7 py-3.5 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5"
+                  href="#why-manacamp"
+                  className="btn-secondary rounded-full px-7 py-3.5 text-base font-semibold border-[rgba(122,176,255,0.14)] bg-[rgba(8,13,27,0.76)] transition-all duration-200 hover:-translate-y-0.5"
                 >
-                  See the Vision
+                  Why ManaCamp
                 </Link>
               </div>
             </ScrollReveal>
@@ -155,7 +155,7 @@ export default function AboutPage() {
                   <h2 className="mt-4 text-2xl sm:text-4xl font-semibold text-white text-balance">
                     ManaCamp exists to bring to life what was lost.
                   </h2>
-                  <p className="mt-4 max-w-3xl text-sm sm:text-base text-text-secondary leading-relaxed">
+                  <p className="mt-4 max-w-3xl text-sm sm:text-base text-[rgb(184,199,232)] leading-relaxed">
                     Modern platforms gained speed and convenience, but often
                     lost the sense of presence that made online communities feel
                     real. ManaCamp is built to restore that feeling, combining
@@ -168,7 +168,10 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="section-divider py-10 sm:py-14">
+        <section
+          id="why-manacamp"
+          className="section-divider py-10 sm:py-14 scroll-mt-24"
+        >
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <ScrollReveal className="max-w-3xl">
               <p className="text-xs uppercase tracking-[0.28em] text-text-secondary">
@@ -187,8 +190,8 @@ export default function AboutPage() {
                 "This is not just about chat. It is about belonging, momentum, identity, and building digital spaces people genuinely want to return to.",
               ].map((paragraph, index) => (
                 <ScrollReveal key={paragraph} delay={index * 0.08}>
-                  <div className="panel rounded-2xl px-5 py-5 sm:px-6 sm:py-6">
-                    <p className="text-sm sm:text-base leading-relaxed text-text-secondary">
+                  <div className="panel rounded-2xl border-[rgba(122,176,255,0.12)] px-6 py-6 sm:px-7 sm:py-6">
+                    <p className="text-sm sm:text-base leading-relaxed text-[rgb(184,199,232)]">
                       {paragraph}
                     </p>
                   </div>
@@ -220,7 +223,7 @@ export default function AboutPage() {
                     delay={index * 0.08}
                     direction="up"
                   >
-                    <div className="panel group h-full rounded-2xl p-5 sm:p-6 transition-all duration-300 hover:-translate-y-1 hover:border-border-strong">
+                    <div className="panel group h-full rounded-2xl border-[rgba(122,176,255,0.12)] p-6 sm:p-6 transition-all duration-300 hover:-translate-y-1 hover:border-border-strong">
                       <div
                         className={`icon-tile mb-4 flex h-11 w-11 items-center justify-center rounded-xl border ${item.accent}`}
                       >
@@ -229,7 +232,7 @@ export default function AboutPage() {
                       <h3 className="text-lg font-semibold text-white">
                         {item.title}
                       </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-text-secondary">
+                      <p className="mt-2.5 text-sm leading-relaxed text-[rgb(184,199,232)]">
                         {item.description}
                       </p>
                     </div>
@@ -243,11 +246,11 @@ export default function AboutPage() {
         <section className="section-divider py-10 sm:py-14">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <ScrollReveal>
-              <div className="panel rounded-[1.75rem] px-6 py-7 sm:px-8 sm:py-8">
+              <div className="panel rounded-[1.75rem] border-[rgba(122,176,255,0.12)] px-6 py-7 sm:px-8 sm:py-8">
                 <p className="text-xs uppercase tracking-[0.28em] text-text-secondary">
                   Built Independently
                 </p>
-                <div className="mt-4 max-w-4xl space-y-4 text-sm sm:text-base leading-relaxed text-text-secondary">
+                <div className="mt-4 max-w-4xl space-y-4 text-sm sm:text-base leading-relaxed text-[rgb(184,199,232)]">
                   <p>
                     ManaCamp is created by Chad Wessendorf, solo developer and
                     founder of DezolveLabs.
