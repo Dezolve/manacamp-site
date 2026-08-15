@@ -36,6 +36,23 @@ pnpm build
 pnpm start
 ```
 
+## Safe Main Merge
+
+Use the merge helper when you want to move a reviewed branch onto `main` with guardrails:
+
+```bash
+# Dry run the checks against the current branch
+pnpm merge:main --dry-run
+
+# Merge a specific branch into main after confirmation
+pnpm merge:main agent/help-center
+
+# Merge and push main in one step without an interactive prompt
+pnpm merge:main agent/help-center --yes --push
+```
+
+The script refuses to continue unless the working tree is clean, the local source branch matches `origin/<branch>`, and the source branch already contains the latest `origin/main`.
+
 ## Deployment
 
 This project is configured for [Vercel](https://vercel.com/) deployment.
