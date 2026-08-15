@@ -15,7 +15,8 @@ A dark, product-aligned marketing site for ManaCamp, a modern community platform
 
 - `/` — Home: hero, product highlights, Windows download, iOS preview, CTA
 - `/download` — Branded download page that resolves the latest Windows installer from the desktop update feed
-- `/support` — Support center with FAQ accordion and contact form
+- `/support` — Searchable help center with product categories and popular guides
+- `/support/[slug]` — Dedicated help articles with related resources and support contact
 - `/privacy` — Dedicated privacy policy
 - `/terms` — Terms & Conditions
 
@@ -50,4 +51,3 @@ This project is configured for [Vercel](https://vercel.com/) deployment.
 - Attribution: `By DezolveLabs · https://dezolvelabs.com`
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Dezolve/manacamp-site)
-

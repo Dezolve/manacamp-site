@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/app/blog/_lib/posts";
 import { legalLastUpdated } from "@/app/legalContent";
 import { absoluteUrl } from "@/app/seo";
+import { supportArticles } from "@/app/support/support-content";
 
 const legalDate = new Date(legalLastUpdated);
 
@@ -51,6 +52,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.4,
     },
+    ...supportArticles.map((article) => ({
+      url: absoluteUrl(`/support/${article.slug}`),
+      lastModified: new Date(`${article.updated}T00:00:00Z`),
+      changeFrequency: "monthly" as const,
+      priority: article.popular ? 0.75 : 0.65,
+    })),
     ...blogPosts.map((post) => ({
       url: absoluteUrl(`/blog/${post.slug}`),
       lastModified: new Date(post.updated ?? post.date),

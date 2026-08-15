@@ -1,30 +1,34 @@
 import type { Metadata } from "next";
 import SupportClient from "@/app/support/SupportClient";
-import { faqs } from "@/app/support/support-content";
+import { supportArticles, supportCategories } from "@/app/support/support-content";
 import { absoluteUrl, createMetadata, seo } from "@/app/seo";
 
 export const metadata: Metadata = createMetadata({
-  title: "Support",
+  title: "Help Center",
   description:
-    "Get ManaCamp support, browse answers to common questions, find download help, and contact the team for account or troubleshooting issues.",
+    "Search ManaCamp help guides for accounts, channels, messages, voice, video, sessions, safety, downloads, and troubleshooting.",
   path: "/support",
   keywords: [...seo.defaultKeywords, "support", "help center", "faq", "troubleshooting"],
 });
 
 export default function SupportPage() {
-  const faqJsonLd = {
+  const helpCenterJsonLd = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.flatMap((section) =>
-      section.questions.map((item) => ({
-        "@type": "Question",
-        name: item.q,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.a,
-        },
+    "@type": "CollectionPage",
+    name: `${seo.siteName} Help Center`,
+    url: absoluteUrl("/support"),
+    description: "ManaCamp help guides and troubleshooting resources.",
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: supportArticles.length,
+      itemListElement: supportArticles.map((article, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: article.title,
+        url: absoluteUrl(`/support/${article.slug}`),
       })),
-    ),
+    },
+    about: supportCategories.map((category) => category.title),
   };
 
   const contactJsonLd = {
@@ -39,7 +43,7 @@ export default function SupportPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(helpCenterJsonLd) }}
       />
       <script
         type="application/ld+json"

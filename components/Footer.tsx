@@ -12,7 +12,7 @@ const footerLinks = {
     { href: "/#ios", label: "iOS App" },
   ],
   Resources: [
-    { href: "/support", label: "Support" },
+    { href: "/support", label: "Help Center" },
     { href: "/guidelines", label: "Community Guidelines" },
     { href: "/terms", label: "Terms & Conditions" },
     { href: "/privacy", label: "Privacy Policy" },

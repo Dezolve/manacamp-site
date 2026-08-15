@@ -219,6 +219,133 @@ button {
   color: var(--text-muted);
 }
 
+.help-search {
+  appearance: none;
+  background:
+    linear-gradient(180deg, rgba(18, 31, 60, 0.98), rgba(9, 17, 34, 0.98)),
+    var(--surface);
+  border: 1px solid rgba(120, 176, 255, 0.2);
+  outline: none;
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.help-search:focus {
+  border-color: rgba(111, 196, 255, 0.76);
+  box-shadow:
+    0 0 0 4px rgba(90, 178, 255, 0.12),
+    0 28px 76px rgba(1, 6, 18, 0.56);
+  transform: translateY(-1px);
+}
+
+.help-search::-webkit-search-cancel-button {
+  display: none;
+}
+
+.help-article > section + section {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.help-article h2 {
+  margin-bottom: 1rem;
+  color: var(--foreground);
+  font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.help-article section > p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.help-article section > p + p {
+  margin-top: 1rem;
+}
+
+.help-steps,
+.help-bullets {
+  margin-top: 1.25rem;
+  list-style: none;
+}
+
+.help-steps {
+  display: grid;
+  gap: 1rem;
+  counter-reset: help-step;
+}
+
+.help-steps li {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.help-steps li > span {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(90, 178, 255, 0.22);
+  border-radius: 9999px;
+  background: rgba(90, 178, 255, 0.09);
+  color: rgb(182, 224, 255);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.help-steps li p {
+  padding-top: 0.2rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.help-bullets {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.help-bullets li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.help-bullets svg {
+  margin-top: 0.3rem;
+  flex-shrink: 0;
+  color: var(--accent-primary);
+}
+
+.help-note {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(255, 159, 67, 0.22);
+  border-radius: 1rem;
+  background: rgba(255, 138, 61, 0.07);
+  color: #ffd5b7;
+}
+
+.help-note p {
+  color: #e9c7ae;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
