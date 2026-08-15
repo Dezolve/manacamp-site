@@ -15,7 +15,7 @@ async function main() {
   const options = {
     dryRun: false,
     prompt: false,
-    push: false,
+    push: true,
   };
 
   let sourceBranch;
@@ -33,6 +33,11 @@ async function main() {
 
     if (arg === '--push') {
       options.push = true;
+      continue;
+    }
+
+    if (arg === '--no-push') {
+      options.push = false;
       continue;
     }
 
@@ -118,7 +123,7 @@ async function main() {
 }
 
 function printHelp() {
-  console.log(`Usage: pnpm merge:main [source-branch] [--dry-run] [--push] [--prompt]
+  console.log(`Usage: pnpm merge:main [source-branch] [--dry-run] [--no-push] [--prompt]
 
 Safely fast-forwards main to a source branch after verifying:
 - the working tree is clean
@@ -128,8 +133,9 @@ Safely fast-forwards main to a source branch after verifying:
 
 Examples:
   pnpm merge:main agent/help-center --dry-run
-  pnpm merge:main agent/help-center --push
-  pnpm merge:main agent/help-center --push --prompt
+  pnpm merge:main agent/help-center
+  pnpm merge:main agent/help-center --prompt
+  pnpm merge:main agent/help-center --no-push
   pnpm merge:main --dry-run
 `);
 }
