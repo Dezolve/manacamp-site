@@ -206,13 +206,17 @@ function awaitConfirmation(branchName, shouldPush) {
 }
 
 function git(args, config = {}) {
-  return execFileSync('git', args, {
+  const result = execFileSync('git', args, {
     encoding: 'utf8',
     stdio: ['ignore', 'pipe', 'pipe'],
     ...config,
-  })
-    .toString()
-    .trim();
+  });
+
+  if (result == null) {
+    return '';
+  }
+
+  return String(result).trim();
 }
 
 function logStep(message) {
