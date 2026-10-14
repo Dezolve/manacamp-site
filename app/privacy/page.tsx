@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Shield } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import LegalNav from "@/components/LegalNav";
-import { legalLastUpdated, privacySections } from "@/app/legalContent";
+import { privacyLastUpdated, privacySections } from "@/app/legalContent";
 import { createMetadata, seo } from "@/app/seo";
 
 export const metadata: Metadata = createMetadata({
@@ -32,7 +32,7 @@ export default function PrivacyPage() {
               Privacy <span className="gradient-text">Policy</span>
             </h1>
             <p className="text-text-secondary text-sm">
-              Last updated: {legalLastUpdated}
+              Last updated: {privacyLastUpdated}
             </p>
           </ScrollReveal>
         </div>
