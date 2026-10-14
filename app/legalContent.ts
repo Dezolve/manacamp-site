@@ -1,4 +1,5 @@
 export const legalLastUpdated = "March 1, 2025";
+export const privacyLastUpdated = "October 14, 2026";
 
 export const privacySections = [
   {
@@ -6,7 +7,7 @@ export const privacySections = [
     title: "Information We Collect",
     content: `We collect information you provide directly to us, such as:
 - Account information (name, email address, password)
-- Messages, uploads, profile details, and other content you choose to add
+- Messages, photos, videos, files, profile details, and other content you choose to share in channels and conversations
 - Payment information for paid services, when applicable, handled by our payment providers
 - Communications with our support team
 
@@ -54,7 +55,20 @@ No system is completely secure. We encourage you to use a strong, unique passwor
 - Object to or restrict processing of your information
 - Portability of your data
 
-To exercise these rights, contact us at privacy@manacamp.app.`,
+You can initiate account deletion directly in the ManaCamp mobile app from Profile > Delete Account. Deletion removes your account's sign-in credentials and profile identity, unlinks relationships and invitations, and removes your account avatar. Your username and display name are replaced with a deleted-user identity. Messages and other contributions previously shared with people or channels may remain visible in the conversation history so other participants can retain the context of their discussions. Some information may also be retained where reasonably needed for security, abuse prevention, legal compliance, or dispute handling.
+
+For accounts that use Sign in with Apple, ManaCamp requests a new, short-lived Apple authorization during account deletion, verifies the account owner, and uses the authorization to attempt to revoke Apple sign-in access. We do not retain that fresh Apple authorization code or resulting Apple tokens after the request. If revocation cannot be completed automatically, deletion still proceeds; you can remove ManaCamp's access in Apple Account settings under Sign in with Apple > ManaCamp > Stop Using Apple ID.
+
+To ask questions, request access or deletion of information not covered by the in-app deletion process, or exercise other applicable rights, contact privacy@manacamp.app.`,
+  },
+  {
+    id: "privacy-accounts",
+    title: "Accounts, Social Content, and Retention",
+    content: `ManaCamp stores account and profile information, friendships and blocking preferences, channel memberships, and content such as messages, attachments, and media uploaded to conversations. We process this information to provide the social and messaging features you use and to enforce community safety rules.
+
+Other people may see and retain content you intentionally share with them or in shared channels. Removing your account does not automatically erase their conversation history or copies they previously received. Uploaded profile avatar files associated with a deleted account are removed where technically possible; other shared content and relevant moderation records may remain subject to applicable retention, safety, or legal needs.
+
+If you use Sign in with Apple, Apple may provide an email address or private relay address for account setup. We use Apple authorization credentials only to authenticate you and, if requested, to attempt to revoke access when deleting your account.`,
   },
 ] as const;
 
