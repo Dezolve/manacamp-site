@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const siteUrl = "https://manacamp.app";
+const siteUrl = "https://manacamp.com";
 const siteName = "ManaCamp";
 const defaultTitle = "Channels, chat, voice, video, and sessions";
 const defaultDescription =
