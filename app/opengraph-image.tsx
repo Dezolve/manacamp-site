@@ -81,7 +81,7 @@ export default function OpenGraphImage() {
           <div style={{ color: "rgba(99,194,255,0.8)" }}>•</div>
           <div>iOS</div>
           <div style={{ color: "rgba(255,138,61,0.8)" }}>•</div>
-          <div>manacamp.app</div>
+          <div>manacamp.com</div>
         </div>
       </div>
     ),
