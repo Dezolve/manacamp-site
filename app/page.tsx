@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import IOSSection from "@/components/IOSSection";
+import AndroidSection from "@/components/AndroidSection";
 import DownloadSection from "@/components/DownloadSection";
 import CTASection from "@/components/CTASection";
 import { absoluteUrl, createMetadata, seo } from "@/app/seo";
@@ -60,6 +61,7 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <IOSSection />
+      <AndroidSection />
       <DownloadSection />
       <CTASection />
     </>
