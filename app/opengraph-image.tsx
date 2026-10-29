@@ -1,5 +1,7 @@
 import { ImageResponse } from "next/og";
 import { seo } from "@/app/seo";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const alt = "ManaCamp — Find your people. Stay for the moments.";
 export const size = {
@@ -8,7 +10,10 @@ export const size = {
 };
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
+  const flameBase64 = await readFile(join(process.cwd(), "assets/favicon-for-app/icon1.png"), "base64");
+  const flameSrc = `data:image/png;base64,${flameBase64}`;
+
   return new ImageResponse(
     (
       <div
@@ -25,65 +30,22 @@ export default function OpenGraphImage() {
           color: "#ffffff",
         }}
       >
-        {/* The gathering motif: connected lights around one warm campfire. */}
+        {/* Use the same blue flame artwork as the ManaCamp website. */}
         <div
           style={{
             display: "flex",
             position: "absolute",
-            width: 370,
-            height: 370,
-            top: 132,
-            right: 55,
-            borderRadius: "50%",
-            border: "1px solid rgba(163,196,232,0.2)",
+            width: 410,
+            height: 410,
+            right: 18,
+            top: 105,
+            alignItems: "center",
+            justifyContent: "center",
+            background: "radial-gradient(circle, rgba(61,151,255,0.19) 0%, rgba(61,151,255,0.04) 45%, transparent 72%)",
           }}
-        />
-        <div
-          style={{
-            display: "flex",
-            position: "absolute",
-            width: 260,
-            height: 260,
-            top: 187,
-            right: 110,
-            borderRadius: "50%",
-            border: "1px solid rgba(163,196,232,0.18)",
-          }}
-        />
-        <div
-          style={{
-            display: "flex",
-            position: "absolute",
-            width: 142,
-            height: 142,
-            top: 246,
-            right: 169,
-            borderRadius: "50%",
-            background: "radial-gradient(circle at 38% 32%, #ffd198 0%, #ff9855 42%, #d25e7d 75%, #864caa 100%)",
-            boxShadow: "0 0 85px rgba(255,137,73,0.35), 0 0 155px rgba(105,108,216,0.2)",
-          }}
-        />
-        {[
-          { top: 148, right: 190, color: "#8bcfff", size: 24 },
-          { top: 312, right: 45, color: "#ffb977", size: 20 },
-          { top: 454, right: 252, color: "#bcb0ff", size: 23 },
-          { top: 268, right: 391, color: "#8bcfff", size: 18 },
-        ].map((light, index) => (
-          <div
-            key={index}
-            style={{
-              display: "flex",
-              position: "absolute",
-              top: light.top,
-              right: light.right,
-              width: light.size,
-              height: light.size,
-              borderRadius: "50%",
-              background: light.color,
-              boxShadow: `0 0 24px ${light.color}`,
-            }}
-          />
-        ))}
+        >
+          <img src={flameSrc} width="365" height="372" alt="" />
+        </div>
 
         <div
           style={{
