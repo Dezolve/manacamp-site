@@ -11,7 +11,8 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function OpenGraphImage() {
-  const flameBase64 = await readFile(join(process.cwd(), "assets/favicon-for-app/icon1.png"), "base64");
+  // Use the original high-resolution transparent flame, not the 96px favicon.
+  const flameBase64 = await readFile(join(process.cwd(), "assets/branding/manacamp-logo.png"), "base64");
   const flameSrc = `data:image/png;base64,${flameBase64}`;
 
   return new ImageResponse(
@@ -44,7 +45,7 @@ export default async function OpenGraphImage() {
             background: "radial-gradient(circle, rgba(61,151,255,0.19) 0%, rgba(61,151,255,0.04) 45%, transparent 72%)",
           }}
         >
-          <img src={flameSrc} width="365" height="372" alt="" />
+          <img src={flameSrc} width={365} height={372} alt="" style={{ objectFit: "contain" }} />
         </div>
 
         <div
