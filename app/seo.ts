@@ -70,7 +70,8 @@ export function createMetadata({
   const canonical = absoluteUrl(path);
 
   return {
-    title,
+    // Set an explicit homepage title while preserving parent title templates for subpages.
+    title: title ?? { absolute: resolvedTitle },
     description,
     keywords,
     alternates: {
