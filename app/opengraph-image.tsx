@@ -17,9 +17,8 @@ export default function OpenGraphImage() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
-          // Keep the footer safely above the title overlay added by social platforms.
-          padding: "56px 56px 128px",
+          justifyContent: "center",
+          padding: "56px",
           background:
             "radial-gradient(circle at 18% 22%, rgba(90,178,255,0.34), transparent 30%), radial-gradient(circle at 82% 18%, rgba(255,138,61,0.28), transparent 24%), linear-gradient(135deg, #081224 0%, #0b1020 45%, #120d1d 100%)",
           color: "#ffffff",
@@ -70,20 +69,6 @@ export default function OpenGraphImage() {
           </div>
         </div>
 
-        <div
-          style={{
-            display: "flex",
-            gap: "18px",
-            fontSize: 26,
-            color: "rgba(255,255,255,0.82)",
-          }}
-        >
-          <div>Windows</div>
-          <div style={{ color: "rgba(99,194,255,0.8)" }}>•</div>
-          <div>iOS</div>
-          <div style={{ color: "rgba(255,138,61,0.8)" }}>•</div>
-          <div>manacamp.com</div>
-        </div>
       </div>
     ),
     size,
