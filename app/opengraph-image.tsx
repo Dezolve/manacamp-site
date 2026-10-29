@@ -18,7 +18,8 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          padding: "56px",
+          // Keep the footer safely above the title overlay added by social platforms.
+          padding: "56px 56px 128px",
           background:
             "radial-gradient(circle at 18% 22%, rgba(90,178,255,0.34), transparent 30%), radial-gradient(circle at 82% 18%, rgba(255,138,61,0.28), transparent 24%), linear-gradient(135deg, #081224 0%, #0b1020 45%, #120d1d 100%)",
           color: "#ffffff",
